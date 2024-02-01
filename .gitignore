@@ -1,3 +1,3 @@
-code-files/React/2-first-react-app/node_modules
-code-files/React/2-first-react-app/.parcel-cache
-code-files/React/2-first-react-app/dist
+node_modules
+.parcel-cache
+dist

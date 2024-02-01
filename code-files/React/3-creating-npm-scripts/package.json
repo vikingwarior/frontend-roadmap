@@ -1,0 +1,12 @@
+{
+  "name": "3-creating-npm-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "npx parcel index.html"
+  },
+  "author": "Harsh Paradkar",
+  "license": "ISC"
+}

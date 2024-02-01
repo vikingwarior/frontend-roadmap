@@ -1,0 +1,36 @@
+{
+  "name": "frontend-roadmap",
+  "version": "1.0.0",
+  "description": "frontend prcatice stuff from css, react, next, tailwind",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": " npx parcel code-files/React/3-creating-npm-scripts/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikingwarior/frontend-roadmap.git"
+  },
+  "keywords": [
+    "frontend-roadmap",
+    "ui",
+    "js",
+    "react",
+    "next",
+    "css",
+    "tailwind"
+  ],
+  "author": "Harsh Paradkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikingwarior/frontend-roadmap/issues"
+  },
+  "homepage": "https://github.com/vikingwarior/frontend-roadmap#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
