@@ -46,12 +46,22 @@ const HeaderComponent = () => (
 // root.render(<HeaderComponent/>);
 
 /**
- * Component Composition -> This when one or more components are being used inside a component that is component composition
+ * Component Composition -> This when one or more components are being used inside a component that is component composition -> See line 62
  */
+
+/**
+ * To insert a JS snippet inside JSX component, enclose it inside {} braces and the lines present inside it will be rendered as pieces of JS code. -> See line 63
+ */
+
+/**
+ * React functional component can also be inserted as functions. For ex. HeaderComponent can also be used with JSX syntax i.e. <HeaderComponent /> or as a normal react function i.e. {HeaderComponent()} inside JSX -> See line 64
+*/
 
 const BodyComponent = () => (
     <div>
         <HeaderComponent />
+        {console.warn("This JS snippet is inserted in JSX using {}")}
+        {HeaderComponent()}
         <div className='body'>
             <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
             This is a React Functional Body Component(Click here for a surprise)
