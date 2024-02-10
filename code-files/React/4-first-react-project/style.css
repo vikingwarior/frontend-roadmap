@@ -14,6 +14,9 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgb(32, 42, 54);
+    position: fixed;
+    width: 100%;
+    /* z-index: 1000; */
 }
 
 .logo{
@@ -44,14 +47,20 @@
 }
 
 .restaurantsCard{
-    justify-self: center;
     margin-bottom: 45px;
-    max-width: 300px;
+    max-width: 350px;
+    padding: 25px;
 }
 
 
+.restaurantsCard:hover {
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
 .restaurantsCard > img {
-    width: 300px;
+    width: 350px;
     height: 175px;
     border-radius: 15px;
 }
@@ -92,6 +101,7 @@
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+    max-width: 350px;
 }
 
 /* IDs */
