@@ -13,7 +13,7 @@ Low Level Design of Component Heirarchy Layout :
        
        -Body
         --Search
-            ---search button
+            ---search box
             ---search button
             ---filter
                 ---price low to high
