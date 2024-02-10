@@ -25,4 +25,9 @@ root.render(heading);
  *      Average Price
  *      Cuisines offered
  *      
+ * Footer
+ *  Contact
+ *  Help
+ *  About
+ 
  */
