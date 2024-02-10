@@ -11,5 +11,18 @@ root.render(heading);
  *  Location
  *  cart
  *  account
+ * 
+ * Body
+ *  Search
+ *      search button
+ *      search button
+ *      filter
  *  
+ *  Restrurant Card
+ *      Image
+ *      Rating
+ *      Distance
+ *      Average Price
+ *      Cuisines offered
+ *      
  */
