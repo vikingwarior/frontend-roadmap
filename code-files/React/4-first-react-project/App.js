@@ -16,7 +16,10 @@ const Header = () => (
 )
 
 const Body = () => (
-    <Search />
+    <div className='body'>
+        <Search />
+        <Restaurant />
+    </div>
 )
 
 const Search = () => (
@@ -38,6 +41,36 @@ const Search = () => (
                 className='searchDivBtn'
             />
         </center>
+    </div>
+)
+
+const Restaurant = () => (
+    <div className='restaurants'>
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+    </div>
+)
+
+const RestaurantCard = () => (
+    <div className='restaurantsCard'>
+        <img
+            src='https://b.zmtcdn.com/data/pictures/chains/0/20600/dcf3d1f28f0f64dd02ceac540ea9cc1d.jpg'
+            alt='restrurant-img'
+        />
+        <h2>Zaranj</h2>
+        < div className='stats'>
+            <h3>4.3/5</h3>
+            <h3>30mins</h3>
+            <h3>₹2,200 for 2</h3>
+        </div>
+        <i>North Indian, Mughlai, Seafood, Desserts, Beverages</i>
     </div>
 )
 

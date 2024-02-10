@@ -27,7 +27,7 @@ Low Level Design of Component Heirarchy Layout :
            ---Restrurant Card
             ----Image
             ----Rating
-            ----Distance
+            ----Delivery Time
             ----Average Price
             ----Cuisines offered
             

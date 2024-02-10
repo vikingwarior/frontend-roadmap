@@ -36,6 +36,27 @@
     cursor: pointer;
 }
 
+.restaurants{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    padding: 55px 12%;
+}
+
+.restaurantsCard{
+    justify-self: center;
+    margin-bottom: 45px;
+    max-width: 300px;
+}
+
+
+.restaurantsCard > img {
+    width: 300px;
+    height: 175px;
+    border-radius: 15px;
+}
+
+
 .searchBox{
     border-radius: 15px;
     /* min-height: 50px; */
@@ -65,6 +86,12 @@
 
 .searchOptions{
     padding: 15px 0;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
 /* IDs */
