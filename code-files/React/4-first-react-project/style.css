@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* TAGS */
+
+
+/* CLASSES */
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(32, 42, 54);
+}
+
+.logo{
+    width: 100px;
+}
+
+.nav-options {
+    display: flex;
+}
+
+.nav-options > li{
+    color: white;
+    font-size: 25px;
+    list-style-type: none;
+    padding: 0 30px;
+}
+
+/* IDs */
