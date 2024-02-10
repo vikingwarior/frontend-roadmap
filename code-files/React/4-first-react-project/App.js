@@ -17,6 +17,12 @@ root.render(heading);
  *      search button
  *      search button
  *      filter
+ *          price low to high
+ *          price high to low
+ *          ratings high to low
+ *          distance nearest to farthest
+ *          Cuisines offered
+ *              cuisines list
  *  
  *  Restrurant Card
  *      Image
