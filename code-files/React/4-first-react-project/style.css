@@ -14,9 +14,9 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgb(32, 42, 54);
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    /* z-index: 1000; */
+    z-index: 1000;
 }
 
 .logo{
@@ -42,7 +42,7 @@
 .restaurants{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
+    grid-template-rows: 35% 35%;
     padding: 55px 12%;
 }
 
@@ -50,18 +50,24 @@
     margin-bottom: 45px;
     max-width: 350px;
     padding: 25px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.restaurantsCard > h2 {
+    margin-top: 20px;
 }
 
 
 .restaurantsCard:hover {
     background-color: #f0f0f0;
-    border: 1px solid black;
+    border: 0.5px solid black;
     border-radius: 15px;
 }
 
 .restaurantsCard > img {
     width: 350px;
-    height: 175px;
+    height: 200px;
     border-radius: 15px;
 }
 
