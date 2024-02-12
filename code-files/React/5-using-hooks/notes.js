@@ -38,5 +38,10 @@ Low Level Design of Component Heirarchy Layout :
  */
 
 /**
-    
+    Conflict driven UI ->
+    Fancy term for custom dynamic UI that is driven on the basis of data is using i.e. any component can be changed in the UI using data that is being sent by the API/user
  */
+
+/**
+    NOTE -> 'key' is a reserved keyword in React library it is used as a reference to identify each component uniquely.
+*/
