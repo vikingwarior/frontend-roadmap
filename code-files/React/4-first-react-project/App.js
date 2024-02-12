@@ -50,6 +50,11 @@ const Search = () => (
 const Restaurant = () => (
     <div className='restaurants'>
         {
+            /**
+             props(slang for properties) -> are attributes sent when using a react component all the props sent with a react component are wrapped inside an Object and sent to the Component call.
+             
+             'key' is an exception, it is a reserved keyword in React library it is used as a reference to identify each component uniquely
+             */
             restaurantData.map((data) => <RestaurantCard key={data.info.id} resData={data} />)
         }
     </div>
