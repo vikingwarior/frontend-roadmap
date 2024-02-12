@@ -1,5 +1,8 @@
 import React from 'react' // importing 'React' module from node_modules/react
 import ReactDOM from 'react-dom/client' // importing 'ReactDOM' module from node_modules/react
+import restaurantData from './restaurant-data.js';
+
+console.log(restaurantData);
 
 const Header = () => (
     <div className="header">
