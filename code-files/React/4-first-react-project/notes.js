@@ -36,3 +36,7 @@ Low Level Design of Component Heirarchy Layout :
         --Help
         --About
  */
+
+/**
+ NOTE -> 'key' is a reserved keyword in React library it is used as a reference to identify each component uniquely.
+*/
