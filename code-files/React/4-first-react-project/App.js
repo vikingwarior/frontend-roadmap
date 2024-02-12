@@ -49,20 +49,17 @@ const Search = () => (
 
 const Restaurant = () => (
     <div className='restaurants'>
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        {
+            restaurantData.map((data) => {
+                return <RestaurantCard resData={data} />
+            })
+        }
     </div>
 )
 
-const RestaurantCard = ({info}) => {
-    const { name, costForTwo, cuisines, avgRating, slaString, cloudinaryImageId} = info;
+const RestaurantCard = ({ resData }) => {
+    const { info } = resData;
+    const { name, costForTwo, cuisines, avgRating, slaString, cloudinaryImageId } = info;
     return (
         <div className='restaurantsCard'>
             <img
