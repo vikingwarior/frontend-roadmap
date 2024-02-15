@@ -5,19 +5,12 @@ import { ReactDOM } from 'react-dom/client' // importing 'ReactDOM' module from 
 import { Header } from "./components/Header";
 import { Body } from './components/Body';
 import {Search} from './components/Search';
+import {Restaurnt} from './components/Restaurant'
+// import {Restaurnt} from './components/Restaurant'
 
 //Imporing data
 import { restaurantData } from './restaurant-data';
 
-console.log(restaurantData);
-
-const Restaurant = () => (
-    <div className='restaurants'>
-        {
-            restaurantData.map((data) => <RestaurantCard key={data.info.id} resData={data} />)
-        }
-    </div>
-)
 
 const RestaurantCard = ({ resData }) => {
     const { name, costForTwo, cuisines, avgRating, slaString, cloudinaryImageId } = resData.info;
