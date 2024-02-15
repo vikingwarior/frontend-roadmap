@@ -1,22 +1,13 @@
 import React from 'react' // importing 'React' module from node_modules/react
 import ReactDOM from 'react-dom/client' // importing 'ReactDOM' module from node_modules/react
+
+// Importing components
+import { Header } from "./components/Header";
+
+//Imporing data
 import restaurantData from './restaurant-data.js';
 
 console.log(restaurantData);
-
-const Header = () => (
-    <div className="header">
-        <img
-            src='https://s3.amazonaws.com/cdn.designcrowd.com/blog/39-Food-Delivery-Logos-That-Will-Leave-You-Hungry-For-More/food-delivery-by-simplepixelsl-brandcrowd.png'
-            className='logo'
-        />
-        <ul className='nav-options'>
-            <li>Home</li>
-            <li>Cart</li>
-            <li>Account</li>
-        </ul>
-    </div>
-)
 
 const Body = () => (
     <div className='body'>
