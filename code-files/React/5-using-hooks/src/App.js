@@ -4,35 +4,12 @@ import { ReactDOM } from 'react-dom/client' // importing 'ReactDOM' module from 
 // Importing components
 import { Header } from "./components/Header";
 import { Body } from './components/Body';
+import {Search} from './components/Search';
 
 //Imporing data
 import { restaurantData } from './restaurant-data';
 
 console.log(restaurantData);
-
-
-
-const Search = () => (
-    <div className='searchOptions'>
-        <center>
-            <input
-                type='text'
-                placeholder='Search for a Restrurant or a dish'
-                className='searchBox'
-            />
-            <input
-                type='button'
-                value='Search'
-                className='searchDivBtn'
-            />
-            <input
-                type='button'
-                value='Filter'
-                className='searchDivBtn'
-            />
-        </center>
-    </div>
-)
 
 const Restaurant = () => (
     <div className='restaurants'>
