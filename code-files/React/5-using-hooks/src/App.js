@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client' // importing 'ReactDOM' module from node
 import { Header } from "./components/Header";
 
 //Imporing data
-import restaurantData from './restaurant-data.js';
+import { restaurantData } from './restaurant-data';
 
 console.log(restaurantData);
 
