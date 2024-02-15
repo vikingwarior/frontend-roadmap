@@ -1,20 +1,16 @@
-import React from 'react' // importing 'React' module from node_modules/react
-import ReactDOM from 'react-dom/client' // importing 'ReactDOM' module from node_modules/react
+import { React } from 'react' // importing 'React' module from node_modules/react
+import { ReactDOM } from 'react-dom/client' // importing 'ReactDOM' module from node_modules/react
 
 // Importing components
 import { Header } from "./components/Header";
+import { Body } from './components/Body';
 
 //Imporing data
 import { restaurantData } from './restaurant-data';
 
 console.log(restaurantData);
 
-const Body = () => (
-    <div className='body'>
-        <Search />
-        <Restaurant />
-    </div>
-)
+
 
 const Search = () => (
     <div className='searchOptions'>
