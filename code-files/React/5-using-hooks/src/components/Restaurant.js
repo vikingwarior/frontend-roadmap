@@ -1,5 +1,5 @@
 //Imporing data
-import restaurantData from '../restaurant-data';
+import restaurantData from '../utils/restaurant-data';
 import RestaurantCard from './RestaurantCard'
 
 const Restaurant = () => (
