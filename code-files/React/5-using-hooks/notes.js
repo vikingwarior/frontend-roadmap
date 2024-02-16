@@ -30,8 +30,14 @@
 
         When this type of file is imported, all the entities with export keyword are nested in an objectt and can be decomposed at the source of import call.
 
+        A file can have multiple Named exports
+
         For example :
 
         import {argument1} from 'file-path/file-name'
+
+    NOTE :
+
+    A file can either have Named Export/s or default export, both cannot be used for the same file 
  */
 
