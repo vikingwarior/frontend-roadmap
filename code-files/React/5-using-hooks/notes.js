@@ -48,5 +48,17 @@
     To import a hook:
     import {hookName} from 'react'
 
-    
+    Popular React Hooks:
+    --------------------
+
+    useState() =>
+    Creates a state object that maintains the state of the component upon which the hook is applied.
+
+    Whenever a state variable changes, React will automatically re-render the component.
+
+    Iniitalizing a state variable.
+
+
+
+
 */
