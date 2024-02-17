@@ -1,11 +1,9 @@
-//Imporing data
-import restaurantData from '../utils/restaurant-data';
 import RestaurantCard from './RestaurantCard'
 
-const Restaurant = () => (
+const Restaurant = ({ restaurantsList }) => (
     <div className='restaurants'>
         {
-            restaurantData.map((data) => <RestaurantCard key={data.info.id} resData={data} />)
+            restaurantsList.map((data) => <RestaurantCard key={data.info.id} resData={data} />)
         }
     </div>
 )

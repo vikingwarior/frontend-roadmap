@@ -15,6 +15,13 @@ const Search = () => (
                 type='button'
                 value='Filter'
                 className='searchDivBtn'
+                onClick={() => {
+                    const data = restaurantData.filter((data) => {
+                        return data.info.avgRating >= 4;
+                    });
+
+                    setRestaurantData(data);
+                }}
             />
         </center>
     </div>
