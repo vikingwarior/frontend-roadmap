@@ -41,3 +41,12 @@
     Both import statements can be used in one file as well, if the user does not specify their requirement, it would get default object/variable. 
  */
 
+/*
+    React Hooks ->
+    Javascript functions present in React Utility Library that helps UI layer to adapt to changes in the data layer and vice-versa. 
+
+    To import a hook:
+    import {hookName} from 'react'
+
+    
+*/
