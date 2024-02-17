@@ -38,6 +38,6 @@
 
     NOTE :
 
-    A file can either have Named Export/s or default export, both cannot be used for the same file 
+    Both import statements can be used in one file as well, if the user does not specify their requirement, it would get default object/variable. 
  */
 
