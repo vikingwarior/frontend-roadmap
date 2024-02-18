@@ -1,4 +1,4 @@
-const Search = () => (
+const Search = ({ setRestaurantsList, restaurantsList }) => (
     <div className='searchOptions'>
         <center>
             <input
@@ -16,11 +16,11 @@ const Search = () => (
                 value='Filter'
                 className='searchDivBtn'
                 onClick={() => {
-                    const data = restaurantData.filter((data) => {
-                        return data.info.avgRating >= 4;
+                    const data = restaurantsList.filter((data) => {
+                        return data.info.avgRating >= 4.3;
                     });
 
-                    setRestaurantData(data);
+                    setRestaurantsList(data);
                 }}
             />
         </center>
