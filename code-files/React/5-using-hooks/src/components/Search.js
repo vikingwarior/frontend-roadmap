@@ -15,13 +15,19 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
                 />
                 <input
                     type='button'
-                    value='Filter'
+                    value='View Top Rated'
                     className='searchDivBtn'
                     onClick={() => {
                         const data = restaurantsList.filter((data) => {
                             return data.info.avgRating >= 4.3;
                         });
 
+                        /*
+                          To change/update the value of a state variable, use the setter method that we defined as the second parameter of the constructor.
+    
+                          To update a state variable:
+                          setVarName(newValue);
+                        */
                         setRestaurantsList(data);
                     }}
                 />

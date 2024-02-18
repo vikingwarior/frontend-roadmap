@@ -1,4 +1,25 @@
 /*
+    Why React is Fast?
+    Because React is efficient in DOM Manipulations
+
+    Why is React efficient in DOM Manipulations?
+    Because React uses a virtual DOM
+
+    What is a Virtual DOM?
+    It is the pseudo representation of all DOM elements in a JS format.
+
+    How does virtual DOM help in making DOM manipulation efficient? 
+    React uses diffence in Virtual DOM nodes to identify changes in DOM structure and then update it.
+
+    What makes React DOM manipulation effecient?
+    Reconsiliation alogrithm(React Fiber)
+
+    What is React Fiber?
+
+    Explain React Fiber architecture
+*/
+
+/*
     Good Practices :
     
     -> Always store the code files in a src folder
@@ -57,7 +78,10 @@
     Whenever a state variable changes, React will automatically re-render the component.
 
     Initalizing a state variable.
-    let[varName, serVarName] = useState(initalVale);
+    let[varName, setVarName] = useState(initalVale);
 
+    To change/update the value of a state variable, use the setter method that we defined as the second parameter of the constructor.
     
+    To update a state variable:
+    setVarName(newValue);
 */
