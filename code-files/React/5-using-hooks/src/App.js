@@ -5,12 +5,14 @@ import ReactDOM from "react-dom/client";  // importing 'ReactDOM' module from no
 import Header from './components/Header';
 import Body from './components/Body';
 
-const AppComponent = () => (
-    <div className='app'>
-        <Header />
-        <Body />
-    </div>
-);
+const AppComponent = () => {
+    return (
+        <div className='app'>
+            <Header />
+            <Body />
+        </div>
+    )
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<AppComponent />);
