@@ -56,9 +56,8 @@
 
     Whenever a state variable changes, React will automatically re-render the component.
 
-    Iniitalizing a state variable.
+    Initalizing a state variable.
+    let[varName, serVarName] = useState(initalVale);
 
-
-
-
+    
 */
