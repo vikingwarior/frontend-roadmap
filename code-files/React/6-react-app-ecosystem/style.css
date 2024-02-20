@@ -61,10 +61,6 @@
 
 
 .restaurantsCard:hover {
-    /* background-color: #1a1717;
-    color: white;
-    border: 0.5px solid black;
-    border-radius: 15px; */
     scale: 0.95;
     cursor: pointer;
 }
