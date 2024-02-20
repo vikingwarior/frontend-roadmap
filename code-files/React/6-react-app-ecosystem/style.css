@@ -13,13 +13,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(32, 42, 54);
+    background-color: rgb(59, 46, 90);
     width: 100%;
     z-index: 1000;
 }
 
 .logo{
     width: 100px;
+    scale: 1.25;
 }
 
 .nav-options {
@@ -28,15 +29,16 @@
 }
 
 .nav-options > li{
-    border: 5px  solid rgb(32, 42, 54);
-    color: white;
+    border: 5px  solid rgb(59, 46, 90);
+    color: rgb(175, 164, 219);
     font-size: 25px;
     list-style-type: none;
     padding: 0 30px;
 }
 
 .nav-options > li:hover{
-    border: 5px  dotted white;
+    scale: 0.95;
+    border-bottom: 1px solid rgb(175, 164, 219);
     cursor: pointer;
 }
 
