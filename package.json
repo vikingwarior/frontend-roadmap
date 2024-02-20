@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": " npx parcel code-files/React/3-creating-npm-scripts/index.html"
+    "start": " npx parcel index.html"
   },
   "repository": {
     "type": "git",
