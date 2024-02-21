@@ -36,11 +36,7 @@ const Body = () => {
         setRestaurantsList(dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }, []);
 
-    if (restaurantsList.length === 0) {
-       return <Shimmer /> 
-    }
-
-    return (
+    return restaurantsList.length === 0 ? <Shimmer /> : (
         <div className='body'>
             <Search setRestaurantsList={setRestaurantsList} restaurantsList={restaurantsList} />
             <Restaurant restaurantsList={restaurantsList} setRestaurantsList={setRestaurantsList} />
