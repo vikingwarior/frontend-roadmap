@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import { API_URL } from '../utils/constants'
 import Search from './Search';
 import Restaurant from './Restaurant'
+import Shimmer from './Shimmer';
 
 const Body = () => {
     /*
@@ -18,7 +19,7 @@ const Body = () => {
         Initalizing a state variable.
         let[varName, serVarName] = useState(initalVale);
      */
-    let [restaurantsList, setRestaurantsList] = useState();
+    let [restaurantsList, setRestaurantsList] = useState([]);
 
     /*
         useEffect() =>
@@ -35,7 +36,10 @@ const Body = () => {
         setRestaurantsList(dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }, []);
 
-    console.log("component rendered");
+    if (restaurantsList.length === 0) {
+       return <Shimmer /> 
+    }
+
     return (
         <div className='body'>
             <Search setRestaurantsList={setRestaurantsList} restaurantsList={restaurantsList} />
