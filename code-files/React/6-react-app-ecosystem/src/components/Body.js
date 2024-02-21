@@ -32,7 +32,7 @@ const Body = () => {
     useEffect(async () => {
         const data = await fetch(API_URL);
         const dataJSON = await data?.json();
-        setRestaurantsList(dataJSON.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+        setRestaurantsList(dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }, []);
 
     console.log("component rendered");
