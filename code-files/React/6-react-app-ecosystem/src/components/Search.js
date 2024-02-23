@@ -21,6 +21,9 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
                     value='Search'
                     className='searchDivBtn'
                     onClick={() => {
+                        if (searchText === '' || searchText === ' ') {
+                            setRestaurantsList(originalRestaurantData)
+                        }
                         const data = originalRestaurantData.filter((data) => {
                             return data.info.name.toLowerCase().includes(searchText.toLowerCase());
                         });
