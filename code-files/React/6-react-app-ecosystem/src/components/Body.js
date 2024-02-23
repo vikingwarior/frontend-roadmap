@@ -11,6 +11,8 @@ import Search from './Search';
 import Restaurant from './Restaurant'
 import Shimmer from './Shimmer';
 
+export let originalRestaurantData = [];
+
 const Body = () => {
     /*
         useState() =>
@@ -33,7 +35,8 @@ const Body = () => {
     useEffect(async () => {
         const data = await fetch(API_URL);
         const dataJSON = await data?.json();
-        setRestaurantsList(dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        originalRestaurantData = dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        setRestaurantsList(originalRestaurantData);
     }, []);
 
     return (
