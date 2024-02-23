@@ -18,6 +18,7 @@ const Header = () => {
                             CURRENT_AUTH_LABEL === AUTH_BUTTON_LABEL.login
                                 ? AUTH_BUTTON_LABEL.logout
                                 : AUTH_BUTTON_LABEL.login;
+                        // Calling this method re-renders the entire component
                         setCurrentAuthLabel(authLabel);
                     }}
                 >
