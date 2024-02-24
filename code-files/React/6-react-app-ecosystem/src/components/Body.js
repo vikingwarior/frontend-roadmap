@@ -33,7 +33,7 @@ const Body = () => {
         useEffect(() =>{'callback function'}, [Dependency Array]);
      */
     useEffect(async () => {
-        const data = await fetch(API_URL);
+        const data = await fetch(API_URL.GET);
         const dataJSON = await data?.json();
         originalRestaurantData = dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         setRestaurantsList(originalRestaurantData);
