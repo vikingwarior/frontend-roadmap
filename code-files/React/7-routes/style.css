@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: #131516; */
+}
+
+/* TAGS */
+
+
+/* CLASSES */
+
+.auth.button{
+  background-color: #F9A03F; /* Orange */
+  border: none;
+  color: #FBE8A6; /* Yellow */
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.auth.button:hover{
+    transform: scale(0.95);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(59, 46, 90);
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo{
+    width: 100px;
+    scale: 1.25;
+}
+
+.nav-options {
+    display: flex;
+    margin-right: 10px;
+}
+
+.nav-options > li{
+    border: 5px  solid rgb(59, 46, 90);
+    color: rgb(175, 164, 219);
+    font-size: 25px;
+    list-style-type: none;
+    padding: 0 30px;
+}
+
+.nav-options > li:hover{
+    scale: 0.95;
+    border-bottom: 1px solid rgb(175, 164, 219);
+    cursor: pointer;
+}
+
+.restaurants{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    padding: 55px 12%;
+}
+
+.restaurantsCard{
+    margin-bottom: 45px;
+    max-width: 350px;
+    padding: 25px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.restaurantsCard > h2 {
+    margin-top: 20px;
+}
+
+
+.restaurantsCard:hover {
+    scale: 0.95;
+    cursor: pointer;
+}
+
+.restaurantsCard > img {
+    width: 350px;
+    height: 233px;
+    border-radius: 15px;
+}
+
+
+.searchBox{
+    border-radius: 15px;
+    /* min-height: 50px; */
+    min-width: 800px;
+    padding: 18px;
+    margin: 0 15px;
+}
+
+.searchDivBtn{
+    padding: 10px 15px;
+    margin: 2px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.searchDivBtn:hover{
+    background-color: red;
+}
+
+.searchDivBtn.searchDivBtn:focus{
+    background-color: greenyellow;
+}
+
+.searchDivBtn.searchDivBtn:after{
+    background-color: white;
+}
+
+.searchOptions{
+    padding: 15px 0;
+}
+
+.shimmer > .card{
+    max-width: 350px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.shimmer > .card > .img {
+    width: 350px;
+    height: 233px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+}
+
+.shimmer > .card > .name {
+    margin-top: 10px;
+    width: 100px;
+    height: 28px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.shimmer > .card > .stats {
+    width: 250px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    max-width: 350px;
+}
+
+/* IDs */
