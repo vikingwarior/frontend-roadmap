@@ -45,7 +45,10 @@ const Body = () => {
             {
                 restaurantsList.length === 0
                     ? <Shimmer />
-                    : <Restaurant restaurantsList={restaurantsList} setRestaurantsList={setRestaurantsList} />
+                    : <Restaurant 
+                            restaurantsList={restaurantsList}
+                            setRestaurantsList={setRestaurantsList}
+                      />
             }
         </div>
     )
