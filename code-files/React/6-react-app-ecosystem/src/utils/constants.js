@@ -1,6 +1,5 @@
 export const API_URL = {
     GET : 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.61610&lng=73.72860&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING',
-
     POST: 'https://www.swiggy.com/dapi/restaurants/list/update'
 };
 
