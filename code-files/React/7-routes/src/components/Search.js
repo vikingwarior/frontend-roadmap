@@ -2,7 +2,7 @@ import { useState } from "react";
 import { originalRestaurantData } from "./Body";
 
 const Search = ({ setRestaurantsList, restaurantsList }) => {
-    [searchText, setsearchText] = useState([]);
+    [searchText, setsearchText] = useState('');
 
     return (
         <div className='searchOptions'>
@@ -21,7 +21,7 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
                     value='Search'
                     className='searchDivBtn'
                     onClick={() => {
-                        if (searchText === '' || searchText === ' ') {
+                        if (searchText === '' || searchText === undefined) {
                             setRestaurantsList(originalRestaurantData)
                         }
                         const data = originalRestaurantData.filter((data) => {

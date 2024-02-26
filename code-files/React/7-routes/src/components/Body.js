@@ -43,7 +43,7 @@ const Body = () => {
         <div className='body'>
             <Search setRestaurantsList={setRestaurantsList} restaurantsList={restaurantsList} />
             {
-                restaurantsList.length === 0
+                restaurantsList?.length === 0
                     ? <Shimmer />
                     : <Restaurant 
                             restaurantsList={restaurantsList}
