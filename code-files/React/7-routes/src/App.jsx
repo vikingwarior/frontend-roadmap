@@ -5,6 +5,7 @@ import { createBrowserRouter } from 'react-router-dom' // Importing Routing conf
 // Importing components
 import Header from './components/Header';
 import Body from './components/Body';
+import About from './components/About';
 
 const AppComponent = () => {
     return (
