@@ -1,6 +1,6 @@
 import React from 'react'; // importing 'React' module from node_modules/react
 import ReactDOM from "react-dom/client";  // importing 'ReactDOM' module from node_modules/react
-import { createBrowserRouter } from 'react-router-dom' // Importing Routing configurator for application
+import { createBrowserRouter, RouterProvider } from 'react-router-dom' // Importing Routing configurator for application(createBrowserRouter) and routing configuration provider(RouterProvider)
 
 // Importing components
 import Header from './components/Header';
@@ -23,13 +23,13 @@ const AppComponent = () => {
 const appRouter = createBrowserRouter([
     {
         path: '/',
-        component: <AppComponent />
+        element: <AppComponent />,
     },
     {
         path: '/about',
-        component: <About />
-    }
+        element: <About />,
+    },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppComponent />);
+root.render(<RouterProvider router={appRouter}/>);
