@@ -16,8 +16,18 @@ const AppComponent = () => {
     )
 };
 
-/**
- *  To  create Routes, i.e. Paths to various pages of an application react-router-dom is used
+/*
+  To  create Routes, i.e. Paths to various pages of an application react-router-dom is used.
+
+  createBrowserRouter() -> is a configurator that stores all routes of the application in an array of JSON objects where each route is a json object containing the path and the corresponding component to load.
+
+  There are various types of routers depending on the use cases.
+
+  Sample strucutre of route:
+  {
+    path: '/urlPath',
+    component: <componentToLoad />
+  }
 */
 
 const appRouter = createBrowserRouter([
@@ -27,9 +37,15 @@ const appRouter = createBrowserRouter([
     },
     {
         path: '/about',
-        element: <About />,
-    },
+        element: <About />
+    }
 ]);
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+/*
+    To use the routes they must be provided inside RouterProvider component,
+    and our router configuration should be passed as prop to this component with a router argument as shown in the snippet below: 
+ */
 root.render(<RouterProvider router={appRouter}/>);
