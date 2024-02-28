@@ -25,7 +25,7 @@ const Body = () => {
 
     /*
         useEffect() =>
-        React Hook that is used to run a function when the component is rendered or removed from the DOM.
+        React Hook that is used to run a function when the component is rendered in the DOM.
 
         If the dependency array is empty then useEffect() will be called only for the first render of the component. But if there is an argument given inside useEffect inside the dependency array it will also be called every time value of the value of arguments inside the dependency array is changed.
 
