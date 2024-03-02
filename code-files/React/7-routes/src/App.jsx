@@ -18,7 +18,7 @@ const AppComponent = () => {
 };
 
 /*
-  To  create Routes, i.e. Paths to various pages of an application react-router-dom is used.
+  To create Routes, i.e. Paths to various pages of an application react-router-dom is used.
 
   createBrowserRouter() -> is a configurator that stores all routes of the application in an array of JSON objects where each route is a json object containing the path and the corresponding component to load.
 
