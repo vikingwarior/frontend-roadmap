@@ -27,7 +27,16 @@ const Body = () => {
         useEffect() =>
         React Hook that is used to run a function when the component is rendered in the DOM.
 
-        If the dependency array is empty then useEffect() will be called only for the first render of the component. But if there is an argument given inside useEffect inside the dependency array it will also be called every time value of the value of arguments inside the dependency array is changed.
+        useEffect() behavior =>
+        
+        - Dependency array absent: useEffec() will be called every time the component is rendered.
+
+        - Dependency array present:
+            - Dependency array is empty:
+              useEffect() will be called only for the first render of the component. 
+
+            -Dependency array has araguments:
+              useEffect() will be called when value of the value of arguments inside the dependency array is updated.
 
         It is trigger at the end of the render and removal states component lifcycle.
 
