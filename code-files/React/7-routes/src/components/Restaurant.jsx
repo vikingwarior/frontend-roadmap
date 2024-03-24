@@ -1,6 +1,6 @@
 import RestaurantCard from './RestaurantCard'
 
-const Restaurant = ({ restaurantsList, setRestaurantsList }) => {
+const Restaurant = ({ restaurantsList}) => {
     return (
         <div className='restaurants'>
             {

@@ -58,7 +58,6 @@ const Body = () => {
                     ? <Shimmer />
                     : <Restaurant 
                             restaurantsList={restaurantsList}
-                            setRestaurantsList={setRestaurantsList}
                       />
             }
         </div>
