@@ -4,20 +4,16 @@
 import { useRouteError } from "react-router-dom";
 
 const Error = () => {
-    const { error, status } = useRouteError();
-    console.log();
-    return (
-        <div>
-            <h1>Oops!! Seems like you encountered an error</h1>
-            <h2>Error Message :</h2>
-            <h3>
-                Status :  {status}
-            </h3>
-            <h3>
-                Message : {error.message}
-            </h3>
-        </div>
-    );
+  const { error, status } = useRouteError();
+  console.log();
+  return (
+    <div>
+      <h1>Oops!! Seems like you encountered an error</h1>
+      <h2>Error Message :</h2>
+      <h3>Status : {status}</h3>
+      <h3>Message : {error.message}</h3>
+    </div>
+  );
 };
 
 export default Error;

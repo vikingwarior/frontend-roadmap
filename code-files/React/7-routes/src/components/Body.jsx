@@ -5,25 +5,25 @@
     To import a hook:
     import {hookName} from 'react'
  */
-import { useState, useEffect } from 'react';
-import { API_URL } from '../utils/constants'
-import Search from './Search';
-import Restaurant from './Restaurant'
-import Shimmer from './Shimmer';
+import { useState, useEffect } from "react";
+import { API_URL } from "../utils/constants";
+import Search from "./Search";
+import Restaurant from "./Restaurant";
+import Shimmer from "./Shimmer";
 
 export let originalRestaurantData = [];
 
 const Body = () => {
-    /*
+  /*
         useState() =>
         Creates a state object that maintains the state of the component upon which the hook is applied.
         
         Initalizing a state variable.
         let[varName, serVarName] = useState(initalVale);
      */
-    let [restaurantsList, setRestaurantsList] = useState([]);
+  let [restaurantsList, setRestaurantsList] = useState([]);
 
-    /*
+  /*
         useEffect() =>
         React Hook that is used to run a function when the component is rendered in the DOM.
 
@@ -43,25 +43,28 @@ const Body = () => {
         Initalizing useEffect hook:
         useEffect(() =>{'callback function'}, [Dependency Array]);
      */
-    useEffect(async () => {
-        const data = await fetch(API_URL.GET);
-        const dataJSON = await data?.json();
-        originalRestaurantData = dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        setRestaurantsList(originalRestaurantData);
-    }, []);
+  useEffect(async () => {
+    const data = await fetch(API_URL.GET);
+    const dataJSON = await data?.json();
+    originalRestaurantData =
+      dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+    setRestaurantsList(originalRestaurantData);
+  }, []);
 
-    return (
-        <div className='body'>
-            <Search setRestaurantsList={setRestaurantsList} restaurantsList={restaurantsList} />
-            {
-                restaurantsList?.length === 0
-                    ? <Shimmer />
-                    : <Restaurant 
-                            restaurantsList={restaurantsList}
-                      />
-            }
-        </div>
-    )
-}
+  return (
+    <div className="body">
+      <Search
+        setRestaurantsList={setRestaurantsList}
+        restaurantsList={restaurantsList}
+      />
+      {restaurantsList?.length === 0 ? (
+        <Shimmer />
+      ) : (
+        <Restaurant restaurantsList={restaurantsList} />
+      )}
+    </div>
+  );
+};
 
 export default Body;

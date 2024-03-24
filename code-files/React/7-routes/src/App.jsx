@@ -1,20 +1,20 @@
-import React from 'react'; // importing 'React' module from node_modules/react
-import ReactDOM from "react-dom/client";  // importing 'ReactDOM' module from node_modules/react
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom' // Importing Routing configurator for application(createBrowserRouter) and routing configuration provider(RouterProvider)
+import React from "react"; // importing 'React' module from node_modules/react
+import ReactDOM from "react-dom/client"; // importing 'ReactDOM' module from node_modules/react
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; // Importing Routing configurator for application(createBrowserRouter) and routing configuration provider(RouterProvider)
 
 // Importing components
-import Header from './components/Header';
-import Body from './components/Body';
-import About from './components/About';
-import Error from './components/Error';
+import Header from "./components/Header";
+import Body from "./components/Body";
+import About from "./components/About";
+import Error from "./components/Error";
 
 const AppComponent = () => {
-    return (
-        <div className='app'>
-            <Header />
-            <Outlet />
-        </div>
-    )
+  return (
+    <div className="app">
+      <Header />
+      <Outlet />
+    </div>
+  );
 };
 
 /*
@@ -34,28 +34,27 @@ const AppComponent = () => {
 */
 
 const appRouter = createBrowserRouter([
-    {
-        path: '/',
-        element: <AppComponent />,
-        children: [
-            {
-                path: '/',
-                element: <Body />
-            },
-            {
-                path: '/about',
-                element: <About />
-            }
-        ],
-        errorElement: <Error />
-    }
+  {
+    path: "/",
+    element: <AppComponent />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+    errorElement: <Error />,
+  },
 ]);
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 /*
     To use the routes they must be provided inside RouterProvider component,
     and our router configuration should be passed as prop to this component with a router argument as shown in the snippet below: 
 */
-root.render(<RouterProvider router={appRouter}/>);
+root.render(<RouterProvider router={appRouter} />);
