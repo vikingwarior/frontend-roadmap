@@ -4,7 +4,10 @@ import { originalRestaurantData } from "./Body";
 const Search = ({ setRestaurantsList, restaurantsList }) => {
     [searchText, setsearchText] = useState('');
 
+    let [buttonStates, setButtonStates] = useState([false, false, true]);
+    
     return (
+
         <div className='searchOptions'>
             <center>
                 <input
@@ -20,14 +23,18 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
                     type='button'
                     value='Search'
                     className='searchDivBtn'
+                    hidden={buttonStates[0]}
                     onClick={() => {
                         if (searchText === '' || searchText === undefined) {
                             setRestaurantsList(originalRestaurantData)
+                        }else{
+                            const data = originalRestaurantData.filter((data) => {
+                                return data.info.name.toLowerCase().includes(searchText.toLowerCase());
+                            });
+                            setRestaurantsList(data);
+                            setButtonStates([true, false, false]);
                         }
-                        const data = originalRestaurantData.filter((data) => {
-                            return data.info.name.toLowerCase().includes(searchText.toLowerCase());
-                        });
-                        setRestaurantsList(data);
+                        
                     }
                     }
                 />
@@ -35,6 +42,7 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
                     type='button'
                     value='View Top Rated'
                     className='searchDivBtn'
+                    hidden={buttonStates[1]}
                     onClick={() => {
                         const data = originalRestaurantData.filter((data) => {
                             return data.info.avgRating >= 4.3;
@@ -47,15 +55,18 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
                           setVarName(newValue);
                         */
                         setRestaurantsList(data);
+                        setButtonStates([false, true, false]);
                     }}
                 />
                 <input 
                     type='button'
                     value="Show Original"
                     className='searchDivBtn'
+                    hidden={buttonStates[2]}
                     onClick={
                         () => {
                             setRestaurantsList(originalRestaurantData);
+                            setButtonStates([false, false, true]);
                         }
                     }
                 />
