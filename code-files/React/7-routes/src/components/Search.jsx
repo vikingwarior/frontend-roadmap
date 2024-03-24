@@ -49,6 +49,16 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
                         setRestaurantsList(data);
                     }}
                 />
+                <input 
+                    type='button'
+                    value="Show Original"
+                    className='searchDivBtn'
+                    onClick={
+                        () => {
+                            setRestaurantsList(originalRestaurantData);
+                        }
+                    }
+                />
             </center>
         </div>
     )
