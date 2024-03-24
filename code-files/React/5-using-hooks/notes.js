@@ -3,7 +3,7 @@
     Because React is efficient in DOM Manipulations
 
     Why is React efficient in DOM Manipulations?
-    Because React uses a virtual DOM
+    Because React uses 2 virtual DOMs
 
     What is a Virtual DOM?
     It is the pseudo representation of all DOM elements in a JS format.
