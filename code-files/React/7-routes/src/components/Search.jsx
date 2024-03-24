@@ -2,18 +2,18 @@ import { useState } from "react";
 import { originalRestaurantData } from "./Body";
 
 const Search = ({ setRestaurantsList, restaurantsList }) => {
-    [searchText, setsearchText] = useState('');
     
     /**
-        buttonStates maintains the argument of hidden state for buttons, whether they should be visible or not. It is an array of 3 parameters of boolean values.
-
-        What each parameter defines.
-
-        [0] -> state of hidden value of the "Search" button
-        [1] -> state of hidden value of the "View Top Rated" button
-        [2] -> state of hidden value of the "Show Original" button
+     buttonStates maintains the argument of hidden state for buttons, whether they should be visible or not. It is an array of 3 parameters of boolean values.
+     
+     What each parameter defines.
+     
+     [0] -> state of hidden value of the "Search" button
+     [1] -> state of hidden value of the "View Top Rated" button
+     [2] -> state of hidden value of the "Show Original" button
      */
-    let [buttonStates, setButtonStates] = useState([false, false, true]);
+    const [buttonStates, setButtonStates] = useState([false, false, true]);
+    const [searchText, setsearchText] = useState('');
     
     return (
 
