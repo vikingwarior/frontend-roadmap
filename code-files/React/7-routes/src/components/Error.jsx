@@ -11,7 +11,7 @@ const Error = () => {
       <h1>Oops!! Seems like you encountered an error</h1>
       <h2>Error Message :</h2>
       <h3>Status : {status}</h3>
-      <h3>Message : {error.message}</h3>
+      <h3>Message : {error?.message}</h3>
     </div>
   );
 };
