@@ -14,6 +14,12 @@ const Header = () => {
         <li>Home</li>
         <li>Cart</li>
         <li>
+          {/*
+            
+            <Link /> ->
+            react-router-dom component that acts a link to  asynchronusly load the link without a refresh unlike an <a /> tag which requires a reload to opern the target link.
+          
+          */}
           <Link to="/about">About</Link>
         </li>
         <button
