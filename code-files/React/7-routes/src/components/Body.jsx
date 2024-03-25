@@ -43,13 +43,15 @@ const Body = () => {
         Initalizing useEffect hook:
         useEffect(() =>{'callback function'}, [Dependency Array]);
      */
-  useEffect(async () => {
-    const data = await fetch(API_URL.GET);
-    const dataJSON = await data?.json();
-    originalRestaurantData =
-      dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
-    setRestaurantsList(originalRestaurantData);
+  useEffect(() => {
+    (async () => {
+      const data = await fetch(API_URL.GET);
+      const dataJSON = await data?.json();
+      originalRestaurantData =
+        dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+      setRestaurantsList(originalRestaurantData);
+    })();
   }, []);
 
   return (
