@@ -53,6 +53,14 @@
     padding: 0 30px;
 }
 
+.nav-options > li > a{
+    border: 5px  solid rgb(59, 46, 90);
+    color: rgb(175, 164, 219);
+    font-size: 25px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
 .nav-options > li:hover{
     scale: 0.95;
     border-bottom: 1px solid rgb(175, 164, 219);
