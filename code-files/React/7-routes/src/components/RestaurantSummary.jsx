@@ -1,4 +1,5 @@
-const RestaurantMenu = () => {
+
+const RestaurantSummary = () => {
     return (
         <div>
             Test
@@ -6,4 +7,4 @@ const RestaurantMenu = () => {
     );
 };
 
-export default RestaurantMenu;
+export default RestaurantSummary;
