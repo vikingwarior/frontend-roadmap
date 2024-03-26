@@ -6,8 +6,8 @@ const RestaurantDetails = () => {
     return (
       <div className="restaurantDetails">
         <BreadCrumb />
-        {/* <RestaurantHeaderDetails />
-        <DeliveryDetails /> */}
+        <RestaurantHeaderDetails />
+        <DeliveryDetails />
       </div>
     );
 };
