@@ -86,3 +86,52 @@
 
 
 */
+
+/*
+    New Component Outline:
+
+    Breadcrumb
+    Header Component
+        RestaurantName
+        RestaurantSummary Component
+            avgRating(totalRatings) . costForTwo
+            availableCuisines
+            [Outlet] outletLocations
+            approxDeliveryTime
+            distanceRange(distance in km) | deliveryFeeCriteria
+    Deals Component (Carousel)
+        [Deal For You] Toggle Buttons
+        Deal Card Component
+            {Discount Info}
+            Use {Coupon Code}
+    Menu Component
+        Preferences Toggle Buttons
+        Top Picks Div
+            Top Picks
+            Top Picks Cards Component
+                Top Pick Card Component
+                    Cuisine Type Icon
+                    Item Name
+                    Item Summary
+
+                    Item Price
+                    Add Button Component
+                        {Add +}Button
+                        customisable
+                Top Pick Card Component
+                Top Pick Card Component
+                ...
+        Menu Categories Component
+            Menu Category Component
+                Category Name
+                Menu Item Component
+                    Menu Item Description Component
+                        Food Type Icon
+                        Item Name
+                        Item Price | Applicable Offer
+                    Menu Item Image Component
+                        Menu Item Image
+                        {Add +} Button
+    Browse Menu Button
+
+ */

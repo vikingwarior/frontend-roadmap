@@ -1,9 +1,9 @@
-import RestaurantSummaryHeader from "./RestaurantSummaryHeader";
+
 
 const RestaurantSummary = () => {
   return (
     <div className="restaurantSummary">
-      <RestaurantSummaryHeader />
+      It works!
     </div>
   );
 };

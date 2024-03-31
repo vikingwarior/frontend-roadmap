@@ -6,6 +6,15 @@
 
 /* TAGS */
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
+
 /* CLASSES */
 
 .auth.button {
@@ -64,11 +73,6 @@
   scale: 0.95;
   border-bottom: 1px solid rgb(175, 164, 219);
   cursor: pointer;
-}
-
-.restaurantSummary {
-  display: flex;
-  justify-content: center;
 }
 
 .restaurants {
