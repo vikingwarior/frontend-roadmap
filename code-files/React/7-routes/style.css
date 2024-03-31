@@ -62,7 +62,6 @@ li{
 }
 
 .nav-options > li > a {
-  border: 5px solid rgb(59, 46, 90);
   color: rgb(175, 164, 219);
   font-size: 25px;
   list-style-type: none;
