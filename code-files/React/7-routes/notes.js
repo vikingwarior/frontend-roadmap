@@ -106,8 +106,7 @@
             Use {Coupon Code}
     Menu Component
         Preferences Toggle Buttons
-        Top Picks Div
-            Top Picks
+         Top Picks
             Top Picks Cards Component
                 Top Pick Card Component
                     Cuisine Type Icon
