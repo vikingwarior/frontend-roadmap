@@ -1,3 +1,27 @@
+/* FONT FACES */
+
+@font-face {
+  font-family: "basis-grotesque-bold";
+  src: url("./src/assets/fonts/BasisGrotesqueArabicPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: "basis-grotesque-regular";
+  src: url("./src/assets/fonts/BasisGrotesqueArabicPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "basis-grotesque-light";
+  src: url("./src/assets/fonts/BasisGrotesqueArabicPro-Light.ttf");
+}
+
+@font-face {
+  font-family: "basis-grotesque-black";
+  src: url("./src/assets/fonts/BasisGrotesqueArabicPro-Black.ttf");
+}
+
+/* GLOBAL STYLES */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,11 +35,28 @@ a {
   text-decoration: none;
 }
 
-li{
+body {
+  /* This will apply to all screen sizes */
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 1800px) {
+  body {
+    /* This will apply when the screen's width is 600px or less */
+    width: 1800px;
+  }
+}
+
+li {
   list-style-type: none;
 }
 
 /* CLASSES */
+
+/* HEADER STYLES */
+.root {
+  min-width: 100%;
+}
 
 .auth.button {
   background-color: #f9a03f; /* Orange */
@@ -41,6 +82,7 @@ li{
   background-color: rgb(59, 46, 90);
   width: 100%;
   z-index: 1000;
+  flex-wrap: nowrap;
 }
 
 .logo {
@@ -51,6 +93,7 @@ li{
 .nav-options {
   display: flex;
   margin-right: 10px;
+  flex-wrap: nowrap;
 }
 
 .nav-options > li {
@@ -73,6 +116,8 @@ li{
   border-bottom: 1px solid rgb(175, 164, 219);
   cursor: pointer;
 }
+
+/* HOMEPAGE STYLES */
 
 .restaurants {
   display: grid;
@@ -168,6 +213,157 @@ li{
   justify-content: space-between;
   margin: 20px 0;
   max-width: 350px;
+  flex-wrap: nowrap;
 }
 
+/* RESTAURNT SUMMARY CSS */
+
+.restaurantSummaryWrapper {
+  width: 100vw;
+}
+
+.restaurantSummary {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-family: basis-grotesque-regular;
+  font-size: large;
+}
+
+.restaurantSummary > div {
+  margin-top: 1rem;
+}
+
+.restaurantSummary > h1 {
+  margin-top: 4rem;
+  font-family: basis-grotesque-black;
+  margin-left: 5px;
+}
+
+/* BREADCRUMB */
+
+.breadCrumb {
+  margin-top: 0;
+}
+
+/* RESTAURANT SUMMARY HEADER CSS */
+
+.restaurnatSummaryHeaderWrapper {
+  padding: 20px;
+  border-radius: 40px;
+  background: rgb(227, 227, 227);
+  background: linear-gradient(
+    0deg,
+    rgba(227, 227, 227, 1) 0%,
+    rgba(255, 255, 255, 1) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  max-width: 85%;
+}
+
+.restaurantSummaryHeader {
+  font-family: basis-grotesque-bold;
+  background: white;
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.restaurantSummaryHeader > div {
+  margin-bottom: 10px;
+}
+
+.ratingsAndAvgCost {
+  display: flex;
+  align-items: flex-start;
+  font-size: larger;
+  margin-bottom: 5px;
+  flex-wrap: nowrap;
+}
+
+.tierSvgIcon {
+  margin-right: 5px;
+}
+
+.ratingsAndCostSeperator {
+  justify-self: center;
+  opacity: 50%;
+  padding: 0 10px;
+}
+
+.restaurantCuisines {
+  display: flex;
+  margin-left: 5px;
+  flex-wrap: nowrap;
+}
+
+.restaurantCuisines > a {
+  margin-left: 5px;
+  font-size: medium;
+  text-decoration: underline;
+  color: orangered;
+}
+
+.outletLocationAndAvgDeliveryTime {
+  display: flex;
+  margin-left: 10px;
+  flex-wrap: nowrap;
+}
+
+.divGraphic {
+  margin: auto 0;
+}
+
+.graphicCircle {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: rgb(196, 196, 196);
+}
+
+.graphicLine {
+  height: 30px;
+  width: 1px;
+  margin: auto;
+  background: rgb(196, 196, 196);
+}
+
+.outletInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  flex-wrap: nowrap;
+  /* font-size: medium; */
+}
+
+.outletInfo > div > span {
+  opacity: 80%;
+  margin-left: 10px;
+  font-family: basis-grotesque-light;
+}
+
+.outletLocation {
+  margin-bottom: 10px;
+}
+
+.avgDeliveryTime {
+  margin-top: 5px;
+}
+
+.restaurantSummaryHeader > hr {
+  margin: 20px 0;
+  transform: scaleX(1.051);
+  opacity: 20%;
+}
+
+.deliverySummary {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.deliverySummary > img {
+  height: 25px;
+  margin-right: 5px;
+}
 /* IDs */
