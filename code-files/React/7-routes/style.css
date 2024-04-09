@@ -366,4 +366,70 @@ li {
   height: 25px;
   margin-right: 5px;
 }
+
+/* DEALS CAROUSEL CSS */
+.dealsCarousel{
+
+}
+
+.carouselHeader{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 90%;
+}
+
+.offerDetails > h2{
+  font-family: basis-grotesque-black;
+  font-size: large;
+}
+
+.offerDetails > h3{
+  font-family: basis-grotesque-bold;
+  font-size: medium;
+  color: grey;
+}
+
+.navButtons > button {
+  border-radius: 50%;
+  background-color: rgb(227, 227, 227);
+  border: 0px;
+  cursor: pointer;
+  margin: 0 5px;
+} 
+
+button  > .arrow{
+  padding: 15px;
+  height: 16px;
+}
+
+.prevButton > img {
+  transform: rotate(180deg);
+}
+
+.carousel{
+  display: flex;
+  overflow: hidden;
+  max-width: 90%;
+  margin-top: 15px;
+}
+
+.carouselCard{
+  display: flex;
+  border: 1px solid rgb(221, 221, 221);
+  flex-shrink: 0;
+  margin-left: 16px;
+  padding: 20px;
+  padding-right: 60px;
+  border-radius: 15px;
+}
+
+.offerDetails{
+  display: flex;
+  width: 100%;
+  column-gap: 2px;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
 /* IDs */
