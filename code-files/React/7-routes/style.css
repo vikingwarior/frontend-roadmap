@@ -410,8 +410,9 @@ button  > .arrow{
 .carousel{
   display: flex;
   overflow: hidden;
-  max-width: 90%;
+  max-width: 80%;
   margin-top: 15px;
+  scroll-behavior: smooth;
 }
 
 .carouselCard{

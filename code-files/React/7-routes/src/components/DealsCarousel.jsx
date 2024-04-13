@@ -32,10 +32,11 @@ const DealsCarousel = () => {
   ];
 
   const scrollCarousel = (btnElement) => {
-    document.querySelector(".carousel").scrollLeft =
+    let cardWidth = document.querySelector(".carouselCard").offsetWidth;
+    document.querySelector(".carousel").scrollLeft +=
       btnElement.classList[0] === "prevButton"
-        ? -btnElement.offsetWidth
-        : btnElement.offsetWidth;
+        ? -cardWidth
+        : cardWidth;
   };
 
   return (
