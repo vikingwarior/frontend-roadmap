@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": " npx parcel index.html"
+    "start": "cd code-files && npx parcel index.html"
   },
   "repository": {
     "type": "git",
