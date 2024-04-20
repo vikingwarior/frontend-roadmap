@@ -1,5 +1,14 @@
+import RestaurantMenuHeader from './RestaurantMenuHeader';
+import RestaurantMenuBody from './RestaurantMenuBody';
+
 const RestaurantMenu = () => {
-    return <div className="RestaurantMenu">Restaurant Menu</div>;
+    return (
+        <>
+            <RestaurantMenuHeader />
+            {/* <RestaurantMenuBody /> */}
+        </>
+
+    );
 };
 
 export default RestaurantMenu;

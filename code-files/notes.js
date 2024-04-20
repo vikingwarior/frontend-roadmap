@@ -54,8 +54,6 @@
                 ...     
     Menu Div
         Preferences Toggle Buttons
-        Top Picks Div
-            Top Picks
             Top Picks Cards Div
                 Top Pick Card Div
                     Cuisine Type Icon
