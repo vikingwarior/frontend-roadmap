@@ -5,7 +5,7 @@ const RestaurantMenu = () => {
     return (
         <>
             <RestaurantMenuHeader />
-            {/* <RestaurantMenuBody /> */}
+            <RestaurantMenuBody />
         </>
 
     );
