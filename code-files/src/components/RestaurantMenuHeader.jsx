@@ -1,20 +1,6 @@
 const RestaurantMenuHeader = () => {
   return (
     <>
-      {function toggleSwitch() {
-        const switchElement = document.querySelector(".switch");
-        const toggleSwitchElement = document.querySelector(".toggle-switch");
-
-        if (switchElement.classList.contains("toggle-on")) {
-          switchElement.classList.remove("toggle-on");
-          switchElement.classList.add("toggle-off");
-          toggleSwitchElement.style.backgroundColor = "grey";
-        } else {
-          switchElement.classList.remove("toggle-off");
-          switchElement.classList.add("toggle-on");
-          toggleSwitchElement.style.backgroundColor = "lime";
-        }
-      }}
       <div className="restaurantMenuHeading">
         <svg
           version="1.1"
@@ -65,11 +51,6 @@ const RestaurantMenuHeader = () => {
       </div>
       <div className="menuHeaderButtons">
         <div className="foodPreferenceToggleContainer">
-          <input className="toggleBox veg" type="checkbox" id="check" />
-          <label
-            htmlFor="check"
-            className="checkboxToggle checkboxToggleVeg"
-          ></label>
         </div>
       </div>  
     </>
