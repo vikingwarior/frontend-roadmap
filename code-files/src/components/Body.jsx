@@ -48,7 +48,7 @@ const Body = () => {
       const data = await fetch(API_URL.GET);
       const dataJSON = await data?.json();
       originalRestaurantData =
-        dataJSON?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        dataJSON?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants;
       setRestaurantsList(originalRestaurantData);
     })();
