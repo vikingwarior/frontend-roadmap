@@ -47,7 +47,7 @@ const RestaurantMenuHeader = () => {
             />{" "}
           </g>
         </svg>
-        <h3>MENU</h3>
+        <h1>MENU</h1>
       </div>
       <div className="menuHeaderButtons">
         <div className="foodPreferenceToggleContainer">

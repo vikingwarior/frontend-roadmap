@@ -1,10 +1,12 @@
+import MenuItem from './MenuItem'
+
 const MenuCategory = ({title, categoryItems}) => {
   return (
     <div className="menuCategory">
-      <h3>{title}</h3>
+      <h2>{title}</h2>
       {
-        categoryItems.map((item)=>{
-
+        categoryItems?.map((item)=>{
+            return <MenuItem key={item.card.info.id} itemData={item.card.info}/>
         })
       }
     </div>
