@@ -1,19 +1,25 @@
 import MenuCategory from "./MenuCategory";
-import resMenu from "../utils/sample-res-menu";
 
-const RestaurantMenuBody = () => {
-  let menuData = resMenu.menu.pl.data.data.cards[6].cards;
+const RestaurantMenuBody = ({ menuBodyData }) => {
   let menuCategoryIdNo = 0;
+
+  const getCategoryProps = (item) => {
+    return { 
+      title: item.card.card.title, 
+      itemCards: item.card.card.itemCards 
+    };
+  };
 
   return (
     <div className="menuBody">
-      {menuData.map((item) => {
-        if (item.hasOwnProperty("itemCards")) {
+      {menuBodyData.map((item) => {
+        if (item.card.card.hasOwnProperty("itemCards")) {
+          const { itemCards, title } = getCategoryProps(item);
           return (
             <MenuCategory
               key={`menu-item-category-${menuCategoryIdNo++}`}
-              title={item.title}
-              categoryItems={item.itemCards}
+              title={title}
+              categoryItems={itemCards}
             />
           );
         }

@@ -1,4 +1,8 @@
-const RestaurantSummaryHeader = () => {
+import { CDN_URL } from "../utils/constants";
+
+const RestaurantSummaryHeader = ({summaryHeaderData}) => {
+  const {costForTwoMessage, cuisines, avgRatingString, totalRatingsString, areaName, sla, feeDetails} = summaryHeaderData;
+
   return (
     <div className="restaurnatSummaryHeaderWrapper">
       <div className="restaurantSummaryHeader">
@@ -39,13 +43,16 @@ const RestaurantSummaryHeader = () => {
               </defs>
             </svg>
           </div>
-          <div className="ratingsDiv">4.3 (10K+ ratings)</div>
+          <div className="ratingsDiv">{avgRatingString} ({totalRatingsString})</div>
           <div className="ratingsAndCostSeperator">•</div>
-          <div className="avgCostForTwoDiv">₹400 for two</div>
+          <div className="avgCostForTwoDiv">{costForTwoMessage}</div>
         </div>
         <div className="restaurantCuisines">
-          <a href="localhost:1234">Burgers,</a>
-          <a href="localhost:1234">Beverages</a>
+          {cuisines.map((cuisineName) => {
+            return (
+              <a href="localhost:1234">{cuisineName}</a>
+            );
+          })}
         </div>
         <div className="outletLocationAndAvgDeliveryTime">
           <div className="divGraphic">
@@ -55,22 +62,20 @@ const RestaurantSummaryHeader = () => {
           </div>
           <div className="outletInfo">
             <div className="outletLocation">
-              Outlet: <span>Dange Chowk</span>
+              Outlet: <span>{areaName}</span>
             </div>
-            <div className="avgDeliveryTime">35-40 mins</div>
+            <div className="avgDeliveryTime">{sla.slaString}</div>
           </div>
         </div>
         <hr />
         <div className="deliverySummary">
           <img
-            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/v1648208530/surgecreatives/info"
+            src= {CDN_URL + "v1648208530/surgecreatives/info"}
             alt="DISTANCE_FEE_NON_FOOD_LM"
             ariahidden="true"
           />
 
-          <div className="deliveryInfo">
-            Far (6.0 kms) | Additional delivery fee will apply
-          </div>
+          <div className="deliveryInfo" dangerouslySetInnerHTML={{ __html: feeDetails.message}} />
         </div>
       </div>
     </div>

@@ -1,35 +1,6 @@
-const DealsCarousel = () => {
-  let offerData = [
+import { CDN_URL } from "../utils/constants";
 
-    {
-      offerInfo: "Free McVeggie Burger",
-      offerCode: "NO CODE REQUIRED",
-      offerBannerUrl:
-        "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_96,h_96/offers/generic",
-    },
-
-    {
-      offerInfo: "20% Off Upto ₹125",
-      offerCode: "USE AMEXMATCHDAY",
-      offerBannerUrl:
-        "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_96,h_96/MARKETING_BANNERS/IMAGES/OFFERS/2024/4/4/a0b7cb44-dab7-4128-9fd7-7b59aab0ab6c_AMEX.png",
-    },
-
-    {
-      offerInfo: "15% Off Upto ₹150",
-      offerCode: "USE HSBCFEST",
-      offerBannerUrl:
-        "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_96,h_96/MARKETING_BANNERS/IMAGES/OFFERS/2024/4/4/ea942094-65ec-4248-9c59-778823fffddb_HSBC.png",
-    },
-
-    {
-      offerInfo: "15% Off Upto ₹300",
-      offerCode: "USE CITIFOODIE",
-      offerBannerUrl:
-        "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_96,h_96/MARKETING_BANNERS/IMAGES/OFFERS/2024/4/4/7806e2f2-5e05-49de-a59f-8b27212b816f_Citi.png",
-    },
-  ];
-
+const DealsCarousel = ({ dealsInfo }) => {
   const scrollCarousel = (btnElement) => {
     let cardWidth = document.querySelector(".carouselCard").offsetWidth;
     document.querySelector(".carousel").scrollLeft +=
@@ -70,19 +41,20 @@ const DealsCarousel = () => {
         </div>
       </div>
       <div className="carousel">
-        {offerData.map(({ offerInfo, offerCode, offerBannerUrl }) => {
+        {dealsInfo.map(({ info }) => {
+          const { header, couponCode, offerLogo, restId } = info;
           return (
-            <div key={`${offerCode}`} className="carouselCard">
+            <div key={`${restId}`} className="carouselCard">
               <img
-                src={offerBannerUrl}
+                src={CDN_URL + offerLogo}
                 alt=""
                 srcSet=""
                 height="48"
                 width="48"
               />
               <div className="offerDetails">
-                <h2>{offerInfo}</h2>
-                <h3>{offerCode}</h3>
+                <h2>{header}</h2>
+                <h3>{couponCode}</h3>
               </div>
             </div>
           );

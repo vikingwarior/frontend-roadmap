@@ -1,11 +1,11 @@
 import RestaurantMenuHeader from './RestaurantMenuHeader';
 import RestaurantMenuBody from './RestaurantMenuBody';
 
-const RestaurantMenu = () => {
+const RestaurantMenu = ({menuBodyData}) => {
     return (
         <>
             <RestaurantMenuHeader />
-            <RestaurantMenuBody />
+            <RestaurantMenuBody menuBodyData={menuBodyData} />
         </>
 
     );
