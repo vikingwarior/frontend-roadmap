@@ -8,6 +8,8 @@ export const API_URL = {
     POST: `https://www.swiggy.com/dapi/restaurants/list/update`
 };
 
+export const RESTAURANT_SUMMARY_DATA_API_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.56&lng=73.95&restaurantId="
+
 export const AUTH_BUTTON_LABEL = {
     login : "Login",
     logout : "Logout"
