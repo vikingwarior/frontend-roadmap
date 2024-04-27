@@ -8,15 +8,16 @@ import { RESTAURANT_SUMMARY_DATA_API_URL } from "../utils/constants";
 
 import { useState } from "react";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const RestaurantSummary = () => {
-  const sampleDataId = "680893";
 
   const [resData, setResData] = useState({});
+  const {resId} = useParams();
 
   useEffect(() => {
     (async () => {
-      const data = await fetch(RESTAURANT_SUMMARY_DATA_API_URL + sampleDataId);
+      const data = await fetch(RESTAURANT_SUMMARY_DATA_API_URL + resId);
       dataJSON = await data?.json();
       setResData(dataJSON);
     })();
