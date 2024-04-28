@@ -8,12 +8,12 @@ import { RESTAURANT_SUMMARY_DATA_API_URL } from "../utils/constants";
 
 import { useState } from "react";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"; //  hook provided be react router to fetch the variable mentioned inside the router(marked by :)
 
 const RestaurantSummary = () => {
 
   const [resData, setResData] = useState({});
-  const {resId} = useParams();
+  const {resId} = useParams(); // extracting the value associated with :resId variable mentioned in the router configuration using useParams() hook.
 
   useEffect(() => {
     (async () => {

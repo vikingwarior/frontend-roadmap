@@ -52,7 +52,7 @@ const appRouter = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/restaurant/:resId",
+        path: "/restaurant/:resId", // : -> it is a notation that is used to mark a variable which can be fetched.
         element: <RestaurantSummary />,
       },
     ],
