@@ -50,7 +50,9 @@ const RestaurantSummaryHeader = ({summaryHeaderData}) => {
         <div className="restaurantCuisines">
           {cuisines.map((cuisineName) => {
             return (
-              <a href="localhost:1234">{cuisineName}</a>
+              <a href="../../">
+                {cuisineName}
+              </a>
             );
           })}
         </div>
