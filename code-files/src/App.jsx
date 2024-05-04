@@ -49,6 +49,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
+        // To see class based component View About
         element: <About />,
       },
       {

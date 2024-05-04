@@ -30,6 +30,7 @@ const About = () => {
         <div>
           {devData.map(({ empId, empName, empDesignation }) => {
             return (
+              // this is a class based component
               <DevCard key={empId} name={empName} title={empDesignation} />
             );
           })}
