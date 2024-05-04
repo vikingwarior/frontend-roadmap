@@ -1,10 +1,6 @@
 import DevCard from "./DevCard";
-import devData from "../utils/devData"
 
 const About = () => {
-
-
-
   return (
     <div>
       <h1>About Us</h1>
@@ -26,14 +22,8 @@ const About = () => {
         <br />
         <h3>Our Team:</h3>
         <br />
-
         <div>
-          {devData.map(({ empId, empName, empDesignation }) => {
-            return (
-              // this is a class based component
-              <DevCard key={empId} name={empName} title={empDesignation} />
-            );
-          })}
+          <DevCard />
         </div>
       </div>
     </div>

@@ -487,5 +487,11 @@ button>.arrow {
     margin-top: 30px;
 }
 
+.aboutDevImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
 
 /* IDs */
