@@ -34663,7 +34663,7 @@ $RefreshReg$(_c, "RestaurantCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"../utils/constants":"hB8jg","@parcel/transformer-js/src/esmodule-helpers.js":"75bf4","react-router-dom":"9VM8P","react/jsx-dev-runtime":"8SgJ4","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"13vyO"}],"imnNo":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"8SgJ4","react-router-dom":"9VM8P","../utils/constants":"hB8jg","@parcel/transformer-js/src/esmodule-helpers.js":"75bf4","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"13vyO"}],"imnNo":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0b57 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35154,8 +35154,10 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _header = require("./Header");
-var _headerDefault = parcelHelpers.interopDefault(_header);
+var _devCard = require("./DevCard");
+var _devCardDefault = parcelHelpers.interopDefault(_devCard);
+var _devData = require("../utils/devData");
+var _devDataDefault = parcelHelpers.interopDefault(_devData);
 const About = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
@@ -35163,20 +35165,66 @@ const About = ()=>{
                 children: "About Us"
             }, void 0, false, {
                 fileName: "src/components/About.jsx",
-                lineNumber: 6,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos libero facilis, vel debitis amet hic sequi iure saepe eos voluptatibus! Modi architecto quibusdam aut, voluptate dolore cum aliquid explicabo officia exercitationem? Dolorem possimus aut, cumque explicabo id illo quibusdam. Quos mollitia explicabo tenetur temporibus nihil dicta possimus consectetur sed sapiente amet, nostrum quia pariatur dignissimos doloremque id, totam, iste qui? Numquam quod dicta exercitationem rem quae dolores accusantium odio non culpa impedit hic iste quaerat, cupiditate dolor omnis iure fuga provident, voluptatibus quis molestias. Officiis consequuntur, quo fugiat voluptatem a accusamus."
             }, void 0, false, {
                 fileName: "src/components/About.jsx",
-                lineNumber: 7,
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/components/About.jsx",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/components/About.jsx",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: "Our Team:"
+                    }, void 0, false, {
+                        fileName: "src/components/About.jsx",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/components/About.jsx",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: (0, _devDataDefault.default).map(({ empId, empName, empDesignation })=>{
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _devCardDefault.default), {
+                                name: empName,
+                                title: empDesignation
+                            }, empId, false, {
+                                fileName: "src/components/About.jsx",
+                                lineNumber: 33,
+                                columnNumber: 15
+                            }, undefined);
+                        })
+                    }, void 0, false, {
+                        fileName: "src/components/About.jsx",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/About.jsx",
+                lineNumber: 24,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/About.jsx",
-        lineNumber: 5,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined);
 };
@@ -35190,7 +35238,137 @@ $RefreshReg$(_c, "About");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"8SgJ4","./Header":"knC38","@parcel/transformer-js/src/esmodule-helpers.js":"75bf4","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"13vyO"}],"cKXa2":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"8SgJ4","./DevCard":"8IEn7","../utils/devData":"eSpGD","@parcel/transformer-js/src/esmodule-helpers.js":"75bf4","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"13vyO"}],"8IEn7":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$082d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$082d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+/*
+  This is a class Based Component
+  
+  to make a class based component, it needs to extend the React.Component interface,
+  alternate way to extend:
+  class DevCard extends Component
+  
+ */ class DevCard extends (0, _reactDefault.default).Component {
+    /*
+      Lifecycle of class based component:
+      - constructor() -> Entry point for component all the declarations and intialization of values is done here.
+      - render() -> This method controls display aspect of the component i.e. what will be displayed on the screen and this is the method where the core logic of entire component is written. Consider this as the functional component.
+      - componentDidMount() -> This method is called when the component is mounted(i.e. when the component has been rendered in the DOM). the can also be considered as equivalent to useEffect() hook for a functional component
+
+      - componentDidUpdate()
+      - componentWillUnmount()
+      - shouldComponentUpdate()
+
+      NOTE - 
+      If there is a child component, call stack of lifecycle methods will be as follows:
+      Parent Constructior -> Parent Render -> Child Constructor -> Child Rendere-> Child ComponentDidMount -> Parent ComponentDidMount
+
+      Explaination:
+      Since the ComponentDidMount method is called only after the render method has finished execution, and the child component is present in the render method, Parent ComponentDidMount has to wait for child component to finish its execution which means all it's lifecycle methods should complete execution in order for the ComponentDidMount method to be invoked, therefore the parent ComponentDidMount method is invoked at the last.
+      
+    */ /*
+      if the class based component has props, then they should be passed to super() for constructor of React class, so that they can be used in other places in the component 
+     */ constructor(props){
+        super(props);
+        this.state = {
+            name: props.name,
+            title: props.title
+        };
+    }
+    render() {
+        const { name, title } = this.state;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: [
+                        "Employee Name: ",
+                        name
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/DevCard.jsx",
+                    lineNumber: 48,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: [
+                        "Employee Designation: ",
+                        title
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/DevCard.jsx",
+                    lineNumber: 49,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        this.setState({
+                            name: "Dynamic Name",
+                            title: "Dynamic Title"
+                        });
+                    },
+                    children: "Click Me!"
+                }, void 0, false, {
+                    fileName: "src/components/DevCard.jsx",
+                    lineNumber: 50,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/components/DevCard.jsx",
+                    lineNumber: 60,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/components/DevCard.jsx",
+                    lineNumber: 61,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/DevCard.jsx",
+            lineNumber: 47,
+            columnNumber: 7
+        }, this);
+    }
+}
+exports.default = DevCard;
+
+  $parcel$ReactRefreshHelpers$082d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"8SgJ4","react":"bghFF","@parcel/transformer-js/src/esmodule-helpers.js":"75bf4","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"13vyO"}],"eSpGD":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const devData = [
+    {
+        empId: "CTO01",
+        empName: "Mark Z",
+        empDesignation: "CTO"
+    },
+    {
+        empId: "CEO01",
+        empName: "Tim C",
+        empDesignation: "CEO"
+    },
+    {
+        empId: "CFO01",
+        empName: "Bill A",
+        empDesignation: "CFO"
+    }
+];
+exports.default = devData;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"75bf4"}],"cKXa2":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1609 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35375,7 +35553,7 @@ $RefreshReg$(_c, "RestaurantSummary");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"8SgJ4","./BreadCrumb":"8QFM1","./RestaurantSummaryHeader":"lmPor","./DealsCarousel":"aFXZH","./RestaurantMenu":"ixexi","./RestaurantSummaryShimmer":"9CGXe","../utils/constants":"hB8jg","react":"bghFF","@parcel/transformer-js/src/esmodule-helpers.js":"75bf4","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"13vyO","react-router-dom":"9VM8P"}],"8QFM1":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"8SgJ4","./BreadCrumb":"8QFM1","./RestaurantSummaryHeader":"lmPor","./DealsCarousel":"aFXZH","./RestaurantMenu":"ixexi","./RestaurantSummaryShimmer":"9CGXe","../utils/constants":"hB8jg","react":"bghFF","react-router-dom":"9VM8P","@parcel/transformer-js/src/esmodule-helpers.js":"75bf4","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"13vyO"}],"8QFM1":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7aa3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

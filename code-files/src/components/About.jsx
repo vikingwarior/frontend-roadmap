@@ -1,6 +1,10 @@
-import Header from "./Header";
+import DevCard from "./DevCard";
+import devData from "../utils/devData"
 
 const About = () => {
+
+
+
   return (
     <div>
       <h1>About Us</h1>
@@ -17,6 +21,20 @@ const About = () => {
         quis molestias. Officiis consequuntur, quo fugiat voluptatem a
         accusamus.
       </p>
+      <div>
+        <br />
+        <br />
+        <h3>Our Team:</h3>
+        <br />
+
+        <div>
+          {devData.map(({ empId, empName, empDesignation }) => {
+            return (
+              <DevCard key={empId} name={empName} title={empDesignation} />
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
