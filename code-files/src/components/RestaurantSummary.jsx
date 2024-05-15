@@ -4,25 +4,17 @@ import DealsCarousel from "./DealsCarousel";
 import RestaurantMenu from "./RestaurantMenu";
 import RestaurantSummaryShimmer from "./RestaurantSummaryShimmer";
 
-import { RESTAURANT_SUMMARY_DATA_API_URL } from "../utils/constants";
-
-import { useState } from "react";
-import { useEffect } from "react";
 import { useParams } from "react-router-dom"; //  hook provided be react router to fetch the variable mentioned inside the router(marked by :)
+
+import useRestaurantData from "../utils/useRestaurantData";
 
 const RestaurantSummary = () => {
 
-  const [resData, setResData] = useState({});
   const {resId} = useParams(); // extracting the value associated with :resId variable mentioned in the router configuration using useParams() hook.
 
-  useEffect(() => {
-    (async () => {
-      const data = await fetch(RESTAURANT_SUMMARY_DATA_API_URL + resId);
-      dataJSON = await data?.json();
-      setResData(dataJSON);
-    })();
-  }, []);
+  const resData = useRestaurantData(resId); // This is a custom hook that is used to modify the restaurantData, it returns a state variable that will have the restaurnt data fetched from the Swiggy API.
 
+  // Getter functions for data
   const getSummaryHeaderData = () => resData.data.cards[2].card.card.info;
 
   const getDealsArray = () =>  resData.data.cards[3].card.card.gridElements.infoWithStyle.offers;
