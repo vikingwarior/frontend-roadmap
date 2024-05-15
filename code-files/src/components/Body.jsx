@@ -52,6 +52,10 @@ const Body = () => {
           ?.restaurants;
       setRestaurantsList(originalRestaurantData);
     })();
+
+    return () => {
+      console.log("Body component unmounted!!");
+    }; // This return function is called when the component is destroyed/unmounted. It can be used to destory items like intervals.
   }, []);
 
   return (
