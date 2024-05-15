@@ -16,9 +16,7 @@ const RestaurantSummary = () => {
 
   // Getter functions for data
   const getSummaryHeaderData = () => resData.data.cards[2].card.card.info;
-
   const getDealsArray = () =>  resData.data.cards[3].card.card.gridElements.infoWithStyle.offers;
-
   const getMenuBodyData = () => resData.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards;
 
   return (
