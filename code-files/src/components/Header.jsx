@@ -11,8 +11,8 @@ const Header = () => {
     <div className="header">
       <img src={LOGO_URL} className="logo" />
       <ul className="nav-options">
-        <li>Home</li>
-        <li>Cart</li>
+        <li><Link to="../../">Home</Link></li>
+        <li><Link to="../cart">Cart</Link></li>
         <li>
           {/*
             
