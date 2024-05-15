@@ -42,9 +42,9 @@ const DealsCarousel = ({ dealsInfo }) => {
       </div>
       <div className="carousel">
         {dealsInfo.map(({ info }) => {
-          const { header, couponCode, offerLogo, restId } = info;
+          const { header, couponCode, offerLogo, offerIds } = info;
           return (
-            <div key={`${restId}`} className="carouselCard">
+            <div key={`${offerIds[0]}`} className="carouselCard">
               <img
                 src={CDN_URL + offerLogo}
                 alt=""

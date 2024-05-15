@@ -1,7 +1,16 @@
 import { CDN_URL } from "../utils/constants";
 
-const RestaurantSummaryHeader = ({summaryHeaderData}) => {
-  const {costForTwoMessage, cuisines, avgRatingString, totalRatingsString, areaName, sla, feeDetails} = summaryHeaderData;
+const RestaurantSummaryHeader = ({ summaryHeaderData }) => {
+  const {
+    id,
+    costForTwoMessage,
+    cuisines,
+    avgRatingString,
+    totalRatingsString,
+    areaName,
+    sla,
+    feeDetails,
+  } = summaryHeaderData;
 
   return (
     <div className="restaurnatSummaryHeaderWrapper">
@@ -43,14 +52,16 @@ const RestaurantSummaryHeader = ({summaryHeaderData}) => {
               </defs>
             </svg>
           </div>
-          <div className="ratingsDiv">{avgRatingString} ({totalRatingsString})</div>
+          <div className="ratingsDiv">
+            {avgRatingString} ({totalRatingsString})
+          </div>
           <div className="ratingsAndCostSeperator">•</div>
           <div className="avgCostForTwoDiv">{costForTwoMessage}</div>
         </div>
         <div className="restaurantCuisines">
           {cuisines.map((cuisineName) => {
             return (
-              <a href="../../">
+              <a key={id} href="../../">
                 {cuisineName}
               </a>
             );
@@ -72,12 +83,15 @@ const RestaurantSummaryHeader = ({summaryHeaderData}) => {
         <hr />
         <div className="deliverySummary">
           <img
-            src= {CDN_URL + "v1648208530/surgecreatives/info"}
+            src={CDN_URL + "v1648208530/surgecreatives/info"}
             alt="DISTANCE_FEE_NON_FOOD_LM"
             ariahidden="true"
           />
 
-          <div className="deliveryInfo" dangerouslySetInnerHTML={{ __html: feeDetails.message}} />
+          <div
+            className="deliveryInfo"
+            dangerouslySetInnerHTML={{ __html: feeDetails.message }}
+          />
         </div>
       </div>
     </div>
