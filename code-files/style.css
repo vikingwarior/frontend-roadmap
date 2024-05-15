@@ -493,5 +493,42 @@ button>.arrow {
     border-radius: 50%;
 }
 
+/* NETWORK ERROR COMPONENT */
+.networkErrorComponent{
+    font-family: "basis-grotesque-bold";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.errorData{
+    font-family: "basis-grotesque-bold";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+}
+
+.errorData > * {
+    margin-top: 10px;
+}
+
+.errorData > button {
+    padding: 10px 20px;
+    font-family: "basis-grotesque-bold";
+    margin-top: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.errorData > button:hover{
+    background-color:red;
+}
+
 
 /* IDs */

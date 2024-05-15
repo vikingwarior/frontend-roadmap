@@ -1,6 +1,7 @@
 import React from "react"; // importing 'React' module from node_modules/react
 import ReactDOM from "react-dom/client"; // importing 'ReactDOM' module from node_modules/react
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; // Importing Routing configurator for application(createBrowserRouter) and routing configuration provider(RouterProvider)
+import useNetworkStatus from "./utils/useNetworkStatus";
 
 // Importing components
 import Header from "./components/Header";
@@ -8,15 +9,29 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Error from "./components/Error";
 import RestaurantSummary from "./components/RestaurantSummary";
+import NetworkErrorComponent from "./components/NetworkErrorComponent";
 
 const AppComponent = () => {
+
+  /*
+    useNetworkStatus() -> is a custom hook that returns true if the network is offline and false if the network is online.
+
+    Difference between a function and a hook function, a hook is a function that uses the features of react ecosystem to fulfill its purpose. Whereas a normal utility function only uses the javascript features to fulfill its purpose.
+
+    Generally, a hook function will begin with term 'use' followed by the name. It is not a rulebut a general convention.
+  */
+  const isOffline = useNetworkStatus();
+  const getComponentAsPerNetworkStatus = (isOffline) => {
+    /*
+      <Outlet> -> used in parent route elements to render their child route elements. This allows nested UI to show up when child routes are rendered. If the parent route matched exactly, it will render a child index route or nothing if there is no index route.
+    */
+    return isOffline ? <NetworkErrorComponent /> : <Outlet />;
+  };
+
   return (
     <div className="app">
       <Header />
-      {/*
-          <Outlet> -> used in parent route elements to render their child route elements. This allows nested UI to show up when child routes are rendered. If the parent route matched exactly, it will render a child index route or nothing if there is no index route.
-      */}
-      <Outlet />
+      {getComponentAsPerNetworkStatus(isOffline)}
     </div>
   );
 };
