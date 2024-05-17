@@ -1,4 +1,4 @@
-import React from "react"; // importing 'React' module from node_modules/react
+import React, { Suspense, lazy } from "react"; // importing 'React' module from node_modules/react
 import ReactDOM from "react-dom/client"; // importing 'ReactDOM' module from node_modules/react
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; // Importing Routing configurator for application(createBrowserRouter) and routing configuration provider(RouterProvider)
 import useNetworkStatus from "./utils/useNetworkStatus";
@@ -6,10 +6,16 @@ import useNetworkStatus from "./utils/useNetworkStatus";
 // Importing components
 import Header from "./components/Header";
 import Body from "./components/Body";
-import About from "./components/About";
 import Error from "./components/Error";
-import RestaurantSummary from "./components/RestaurantSummary";
 import NetworkErrorComponent from "./components/NetworkErrorComponent";
+import RestaurantSummaryShimmer from "./components/RestaurantSummaryShimmer";
+
+/*
+  lazy() -> A react utility that helps you chunk the data mentioned inside it.
+  i.e. The component/data is fetched when it needs to be rendered on to the UI.
+*/ 
+const About = lazy(() => import("./components/About"));
+const RestaurantSummary = lazy(() => import("./components/RestaurantSummary"));
 
 const AppComponent = () => {
 
@@ -65,11 +71,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         // To see class based component View About
-        element: <About />,
+        element: <Suspense fallback={<RestaurantSummaryShimmer/>}><About /></Suspense>,
       },
       {
         path: "/restaurant/:resId", // : -> it is a notation that is used to mark a variable which can be fetched.
-        element: <RestaurantSummary />,
+        /*
+          when, component is being fetched, in this case say, RestaurantSummary while it is not present and if React tries to show it before it is fetched, that can break our code. To handle this, we wrap the CHUNKED component inside a suspense component so that that <Suspense> component acts as a placeholder while the real component is being loaded and in order to define what would <Suspense> use as a placeholder, it should be defined inside the "fallback" prop of the suspense component.
+        */
+        element: <Suspense fallback={<RestaurantSummaryShimmer/>}><RestaurantSummary /></Suspense>,
       },
     ],
     errorElement: <Error />,
