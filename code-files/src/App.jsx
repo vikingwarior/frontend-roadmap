@@ -13,12 +13,11 @@ import RestaurantSummaryShimmer from "./components/RestaurantSummaryShimmer";
 /*
   lazy() -> A react utility that helps you chunk the data mentioned inside it.
   i.e. The component/data is fetched when it needs to be rendered on to the UI.
-*/ 
+*/
 const About = lazy(() => import("./components/About"));
 const RestaurantSummary = lazy(() => import("./components/RestaurantSummary"));
 
 const AppComponent = () => {
-
   /*
     useNetworkStatus() -> is a custom hook that returns true if the network is offline and false if the network is online.
 
@@ -71,14 +70,22 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         // To see class based component View About
-        element: <Suspense fallback={<RestaurantSummaryShimmer/>}><About /></Suspense>,
+        element: (
+          <Suspense fallback={<RestaurantSummaryShimmer />}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurant/:resId", // : -> it is a notation that is used to mark a variable which can be fetched.
         /*
           when, component is being fetched, in this case say, RestaurantSummary while it is not present and if React tries to show it before it is fetched, that can break our code. To handle this, we wrap the CHUNKED component inside a suspense component so that that <Suspense> component acts as a placeholder while the real component is being loaded and in order to define what would <Suspense> use as a placeholder, it should be defined inside the "fallback" prop of the suspense component.
         */
-        element: <Suspense fallback={<RestaurantSummaryShimmer/>}><RestaurantSummary /></Suspense>,
+        element: (
+          <Suspense fallback={<RestaurantSummaryShimmer />}>
+            <RestaurantSummary />
+          </Suspense>
+        ),
       },
     ],
     errorElement: <Error />,
