@@ -134,3 +134,7 @@
     Browse Menu Button
 
  */
+
+
+
+// OneUp-detailsBar OneUp-detailsBar--hasCaption
