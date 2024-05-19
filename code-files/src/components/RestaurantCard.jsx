@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {
-  const {id, name, costForTwo, cuisines, avgRating, sla, cloudinaryImageId } =
+  const { id, name, costForTwo, cuisines, avgRating, sla, cloudinaryImageId } =
     resData.info;
+    console.log(resData);
   const { slaString } = sla;
   return (
     <Link to={`/restaurant/${id}`}>
@@ -19,6 +20,22 @@ const RestaurantCard = ({ resData }) => {
       </div>
     </Link>
   );
+};
+
+/* 
+  Higher Order Component:
+  A JS Function which takes a React Component as an input and Returns a React Component.
+  This Approach is generally used to wrap a component with additional data and/or attach additional DOM nodes
+ */
+export const WithPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label>Promoted</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;
