@@ -4,7 +4,7 @@ const MenuItem = ({itemData}) => {
     const ratingCount = ratings.aggregatedRating.ratingCountV2 || 0;
 
     return (
-        <div className="menuItem">
+        <div className="">
             <h3>{name}</h3>
             <h4>₹{price/100}</h4>
             <h5>{rating}({ratingCount})</h5>
