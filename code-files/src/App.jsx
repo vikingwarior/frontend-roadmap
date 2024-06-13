@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react"; // importing 'React' module from node_modules/react
+import React, { Suspense, lazy, useContext, useState, useEffect } from "react"; // importing 'React' module from node_modules/react
 import ReactDOM from "react-dom/client"; // importing 'ReactDOM' module from node_modules/react
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; // Importing Routing configurator for application(createBrowserRouter) and routing configuration provider(RouterProvider)
 import useNetworkStatus from "./utils/useNetworkStatus";
@@ -9,6 +9,9 @@ import Body from "./components/Body";
 import Error from "./components/Error";
 import NetworkErrorComponent from "./components/NetworkErrorComponent";
 import RestaurantSummaryShimmer from "./components/RestaurantSummaryShimmer";
+
+//Importing Context
+import UserContext from "./utils/UserContext";
 
 /*
   lazy() -> A react utility that helps you chunk the data mentioned inside it.
@@ -33,11 +36,34 @@ const AppComponent = () => {
     return isOffline ? <NetworkErrorComponent /> : <Outlet />;
   };
 
+  /*
+    Context ->
+    Context lets the parent component make some information available to any component in the tree below it—no matter how deep—without passing it explicitly through props(drilling props).
+
+    useContext -> 
+    useContext is a Hook. Just like useState and useReducer, you can only call a Hook immediately inside a React component (not inside loops or conditions). useContext tells React that the Header component wants to read the UserContext.
+   */
+  const { userNameValue } = useContext(UserContext);
+  const [userName, setUserName] = useState(userNameValue);
+
+  useEffect(() => {
+    const data = {
+      name: "Harsh Paradkar",
+    };
+    setUserName(data.name);
+  }, []);
+
   return (
-    <div className="app">
-      <Header />
-      {getComponentAsPerNetworkStatus(isOffline)}
-    </div>
+    /*
+      To alter the value of context for a set block of App/Component, the value can be defined in "value" prop of "UserContext.Provider" component
+      and nest that block of code under <UserComponent.Provider> JSX tag
+     */
+    <UserContext.Provider value={{ userNameValue: userName }}>
+      <div className="app">
+        <Header />
+        {getComponentAsPerNetworkStatus(isOffline)}
+      </div>
+    </UserContext.Provider>
   );
 };
 

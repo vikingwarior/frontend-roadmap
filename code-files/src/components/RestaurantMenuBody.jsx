@@ -21,6 +21,19 @@ const RestaurantMenuBody = ({ menuBodyData }) => {
       {menuItemsToDisplay.map((item, index) => {
         const { itemCards, title } = getCategoryProps(item);
         return (
+          /**
+           * This is a controlled component.
+           * 
+           * Controlled Component:
+           * A controlled component is a component whose state, properties, etc. are controlled by another component
+           * mostly the parent component.
+           * 
+           * Props Drilling:
+           * The process of passing data using props from a component higher in the heirarchy to a component in the
+           * lower heirarchy is props drilling, usually props drilling is not recommended for the data to the components
+           * nested for more than 2 layers. For that use of Context is recommended.
+           * 
+           */
           <MenuCategory
             key={`menu-item-category-${menuCategoryIdNo++}`}
             title={title}

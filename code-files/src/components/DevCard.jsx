@@ -1,5 +1,6 @@
 import React from "react";
 import { GITHUB_USER_API_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 /*
   This is a class Based Component
@@ -111,9 +112,15 @@ class DevCard extends React.Component {
 
     return (
       <div>
+        <h5>Hello👋</h5>
+        <UserContext.Consumer>
+          {
+            ({userNameValue: userName}) => <h2>{userName}</h2>
+          }
+        </UserContext.Consumer>
         <img src={avatar_url} alt="Photo" className="aboutDevImg" />
-        <h3>Name: {name}</h3>
-        <h3>Location: {location}</h3>
+        <h3>My Name is {name}</h3>
+        <h3>I live in {location}</h3>
         <br />
         <br />
       </div>

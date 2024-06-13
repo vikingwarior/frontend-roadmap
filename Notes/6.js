@@ -137,4 +137,4 @@
 
 
 
-// OneUp-detailsBar OneUp-detailsBar--hasCaption
+// #appRoot > div > div:nth-child(2) > div > div > div > div.OneUp-content > div.OneUp-detailsBar.OneUp-detailsBar--hasCaption
