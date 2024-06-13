@@ -26,6 +26,15 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
           }
           onChange={(e) => {
             setsearchText(e.target.value);
+
+            // Updates search results in real-time
+            const data = originalRestaurantData.filter((data) => {
+              return data.info.name
+                .toLowerCase()
+                .includes(searchText.toLowerCase());
+            });
+
+            setRestaurantsList(data);
           }}
         />
         <input
