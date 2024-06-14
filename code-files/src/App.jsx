@@ -19,6 +19,7 @@ import UserContext from "./utils/UserContext";
 */
 const About = lazy(() => import("./components/About"));
 const RestaurantSummary = lazy(() => import("./components/RestaurantSummary"));
+const Cart = lazy(() => import("./components/Cart"));
 
 const AppComponent = () => {
   /*
@@ -101,6 +102,14 @@ const appRouter = createBrowserRouter([
             <About />
           </Suspense>
         ),
+      },
+      {
+        path: "/cart",
+        element: (
+          <Suspense fallback={<RestaurantSummaryShimmer/>}>
+            <Cart/>
+          </Suspense>
+        )
       },
       {
         path: "/restaurant/:resId", // : -> it is a notation that is used to mark a variable which can be fetched.
