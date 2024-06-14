@@ -20,7 +20,7 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
         <input
           type="text"
           placeholder="Search for a Restrurant or a dish"
-          className="searchBox"
+          className="searchBox border border-black"
           value={
             searchText /*This alonen will prevent the value of textbox from being updated, therfore its value should be updated as well to do this onChange event handler can be used*/
           }
@@ -40,7 +40,7 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
         <input
           type="button"
           value="Search"
-          className="searchDivBtn"
+          className="searchDivBtn border border-black"
           hidden={buttonStates[0]}
           onClick={() => {
             if (searchText === "" || searchText === undefined) {
@@ -59,7 +59,7 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
         <input
           type="button"
           value="View Top Rated"
-          className="searchDivBtn"
+          className="searchDivBtn border border-black"
           hidden={buttonStates[1]}
           onClick={() => {
             const data = originalRestaurantData.filter((data) => {
@@ -79,7 +79,7 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
         <input
           type="button"
           value="Show Original"
-          className="searchDivBtn"
+          className="searchDivBtn border border-black"
           hidden={buttonStates[2]}
           onClick={() => {
             setRestaurantsList(originalRestaurantData);
