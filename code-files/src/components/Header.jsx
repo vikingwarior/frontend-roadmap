@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import { AUTH_BUTTON_LABEL } from "../utils/constants";
 import { LOGO_URL } from "../utils/constants";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   [CURRENT_AUTH_LABEL, setCurrentAuthLabel] = useState(AUTH_BUTTON_LABEL.login);
 
   const {userNameValue: userName} = useContext(UserContext);
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="header">
@@ -16,7 +18,7 @@ const Header = () => {
       <ul className="nav-options">
       <li>Welcome : <span className="text-fuchsia-500">{userName}</span></li>
         <li><Link to="../../">Home</Link></li>
-        <li><Link to="../../Cart">Cart</Link></li>
+        <li><Link to="../../cart">Cart{cartItems.length > 0 && " [" + cartItems.length + "]"}</Link></li>
         <li>
           {/*
             
