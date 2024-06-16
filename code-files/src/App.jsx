@@ -1,9 +1,16 @@
-import React, { Suspense, lazy, useContext, useState, useEffect } from "react"; // importing 'React' module from node_modules/react
+// importing utils and Hooks
+import React, { lazy, useContext, useState, useEffect } from "react"; // importing 'React' module from node_modules/react
 import ReactDOM from "react-dom/client"; // importing 'ReactDOM' module from node_modules/react
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; // Importing Routing configurator for application(createBrowserRouter) and routing configuration provider(RouterProvider)
+import { createBrowserRouter } from "react-router-dom"; // Importing Routing configurator for application(createBrowserRouter) and routing configuration provider(RouterProvider)
 import useNetworkStatus from "./utils/useNetworkStatus";
 
+import appDataStore from "./utils/redux/appDataStore";
+
 // Importing components
+import { Suspense } from "react";
+import { RouterProvider, Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
+
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Error from "./components/Error";
@@ -56,15 +63,20 @@ const AppComponent = () => {
 
   return (
     /*
-      To alter the value of context for a set block of App/Component, the value can be defined in "value" prop of "UserContext.Provider" component
-      and nest that block of code under <UserComponent.Provider> JSX tag
+        Provider is a React wrapper Component which gives access to Redux store which is defined "store" prop and treats it as the store for the said context.
      */
-    <UserContext.Provider value={{ userNameValue: userName }}>
-      <div className="app">
-        <Header />
-        {getComponentAsPerNetworkStatus(isOffline)}
-      </div>
-    </UserContext.Provider>
+    <Provider store={appDataStore}>
+      {/*
+          To alter the value of context for a set block of App/Component, the value can be defined in "value" prop of "UserContext.Provider" component
+          and nest that block of code under <UserComponent.Provider> JSX tag
+     */}
+      <UserContext.Provider value={{ userNameValue: userName }}>
+        <div className="app">
+          <Header />
+          {getComponentAsPerNetworkStatus(isOffline)}
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -106,10 +118,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart",
         element: (
-          <Suspense fallback={<RestaurantSummaryShimmer/>}>
-            <Cart/>
+          <Suspense fallback={<RestaurantSummaryShimmer />}>
+            <Cart />
           </Suspense>
-        )
+        ),
       },
       {
         path: "/restaurant/:resId", // : -> it is a notation that is used to mark a variable which can be fetched.
