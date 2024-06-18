@@ -4,11 +4,17 @@
   "description": "A mock of a food ordering app",
   "scripts": {
     "start": "npx parcel index.html",
-    "build": "rm -rf .parcel-cache && parcel build"
+    "build": "rm -rf .parcel-cache && parcel build",
+    "test": "jest"
   },
   "author": "Harsh Paradkar",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@testing-library/react": "^16.0.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
     "parcel": "^2.11.0",
     "postcss": "^8.4.38",
     "process": "^0.11.10",
