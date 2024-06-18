@@ -19,7 +19,6 @@ const MenuItem = ({ itemData }) => {
       <button
         className="auth button p-2 my-3"
         onClick={() => {
-          console.log(itemData);
           dispatch(addItem(itemData));
         }}
       >
