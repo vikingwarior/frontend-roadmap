@@ -27,6 +27,7 @@ import UserContext from "./utils/UserContext";
 const About = lazy(() => import("./components/About"));
 const RestaurantSummary = lazy(() => import("./components/RestaurantSummary"));
 const Cart = lazy(() => import("./components/Cart"));
+const Contact = lazy(() => import("./components/Contact"));
 
 const AppComponent = () => {
   /*
@@ -120,6 +121,14 @@ const appRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<RestaurantSummaryShimmer />}>
             <Cart />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/contact",
+        element: (
+          <Suspense fallback={<RestaurantSummaryShimmer />}>
+            <Contact />
           </Suspense>
         ),
       },
