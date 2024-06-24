@@ -1,3 +1,4 @@
 node_modules
 .parcel-cache
 code-files/dist
+code-files/coverage/clover.xml
