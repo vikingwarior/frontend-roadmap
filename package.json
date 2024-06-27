@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/vikingwarior/frontend-roadmap#readme",
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.6",
     "parcel": "^2.12.0"
   },
   "dependencies": {
