@@ -13,8 +13,9 @@
  8. Inside '__test__' folder, you can write files with extn *.test.js/ts or *.spec.js/ts
  9. execute test cases with "npm run test".
 
-
- ## To debug with JSX
+ ## To write JSX inside your test cases
+ 10. Install @babel/preset-react ~ helps to use jsx in test cases
+ 11. Include @babel/preset-react inside 'babel.config.js' ~ this tells babel to expect jsx inside the test cases
 
 # Significance of '__*__':
 
