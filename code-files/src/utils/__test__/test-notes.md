@@ -20,3 +20,18 @@
 # Significance of '__*__':
 
  Called as dunder, Dunder is a reserved keyword, that is used to signify that the folder contains some essential info. In this case, it contains our test case files. 
+
+
+# Footnotes:
+
+- 'test' is the method which is used to write test cases, it takes 2 arguments:
+ 1. A string that can be used for describing the functionality of this method
+ 2. A callback method, which is the actual test case.
+
+- screen -> the object of jsdom which contains all the nodes.
+
+- expect() method is used to make the assertion, i.e. it is the place where the expected output is validated against the output received from the service.
+
+- describe block can be used to group test cases.
+
+- 'it' is an alternative name for 'test' method
