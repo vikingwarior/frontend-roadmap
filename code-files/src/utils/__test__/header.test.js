@@ -14,6 +14,10 @@ describe("Test Cases For Header Component", () => {
         </Provider>
       </BrowserRouter>
     );
+
+    /**
+        As a second argument in these getter functions(getByText, getByRole, etc.), an object containing details of element(name, type, id, etc) to be fetched can be passed as second argument. 
+     */
     const aboutTag = screen.getByText("About");
     expect(aboutTag).toBeInTheDocument();
   });
