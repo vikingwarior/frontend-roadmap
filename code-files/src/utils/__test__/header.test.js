@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import appDataStore from "../../utils/redux/appDataStore";
+import '@testing-library/jest-dom';
 
 import Header from "../../components/Header";
 import { Provider } from "react-redux";
