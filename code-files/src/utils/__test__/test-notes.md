@@ -35,3 +35,7 @@
 - describe block can be used to group test cases.
 
 - 'it' is an alternative name for 'test' method
+
+- Fetch function does not exist in testing Library as it is not a native JavaScript ApI but a browser API. THerefore to use it inside our test cases we will need Mock/Dummy Fetch API (replicate the structure of fetch API) for our utility.
+
+- When testing, code that causes React state updates should be wrapped into act this ensures that you're testing the behavior the user would see in the browser.

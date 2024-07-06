@@ -7,6 +7,9 @@ import Body from "../../components/Body";
 import DUMMY_RES_DATA from "../mocks/dummyrestaurant-data";
 import { BrowserRouter } from "react-router-dom";
 
+/*
+    Fetch function does not exist in testing Library as it is not a native JavaScript ApI but a browser API. THerefore to use it inside our test cases we will need Mock/Dummy Fetch API (replicate the structure of fetch API) for our utility.
+ */
 global.fetch = jest.fn(() => {
   return Promise.resolve({
     json: () => Promise.resolve(DUMMY_RES_DATA),
