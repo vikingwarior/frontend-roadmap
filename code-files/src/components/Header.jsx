@@ -7,7 +7,6 @@ import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 
 const Header = () => {
-  [CURRENT_AUTH_LABEL, setCurrentAuthLabel] = useState(AUTH_BUTTON_LABEL.login);
 
   const {userNameValue: userName} = useContext(UserContext);
   const cartItems = useSelector((store) => store.cart.items);
