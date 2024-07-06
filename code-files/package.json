@@ -5,7 +5,8 @@
   "scripts": {
     "start": "npx parcel index.html",
     "build": "rm -rf .parcel-cache && parcel build",
-    "test": "jest"
+    "test": "jest",
+    "watch-test": "jest --watch"
   },
   "author": "Harsh Paradkar",
   "license": "ISC",
