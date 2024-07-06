@@ -4,7 +4,6 @@ import { CDN_URL } from "../utils/constants";
 const RestaurantCard = ({ resData }) => {
   const { id, name, costForTwo, cuisines, avgRating, sla, cloudinaryImageId } =
     resData.info;
-    console.log(resData);
   const { slaString } = sla;
   return (
     <Link to={`/restaurant/${id}`}>
