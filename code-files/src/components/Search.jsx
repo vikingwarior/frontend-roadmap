@@ -21,6 +21,7 @@ const Search = ({ setRestaurantsList, restaurantsList }) => {
           type="text"
           placeholder="Search for a Restrurant or a dish"
           className="searchBox border border-black"
+          data-testid="inp-text-box"
           value={
             searchText /*This alonen will prevent the value of textbox from being updated, therfore its value should be updated as well to do this onChange event handler can be used*/
           }

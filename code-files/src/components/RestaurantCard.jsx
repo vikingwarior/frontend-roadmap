@@ -7,7 +7,7 @@ const RestaurantCard = ({ resData }) => {
   const { slaString } = sla;
   return (
     <Link to={`/restaurant/${id}`}>
-      <div className="restaurantsCard">
+      <div className="restaurantsCard" data-testid="res-card">
         <img src={CDN_URL + cloudinaryImageId} alt="restrurant-img" />
         <h2>{name}</h2>
         <div className="stats">
