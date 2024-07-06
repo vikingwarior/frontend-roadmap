@@ -33,27 +33,37 @@ describe("Search Integration tests", () => {
         As a second argument in these getter functions(getByText, getByRole, etc.), an object containing details of element(name, type, id, etc) to be fetched can be passed as second argument. 
      */
     const searchTextBox = screen.getByTestId("inp-text-box");
-    const searchBtn = screen.getByRole("button", {name: "Search"});
-
+    const searchBtn = screen.getByRole("button", { name: "Search" });
+    const topRatedhBtn = screen.getByRole("button", { name: "View Top Rated" });
 
     // Assertion to check if btn and box is loaded or not
     expect(searchTextBox).toBeInTheDocument();
     expect(searchBtn).toBeInTheDocument();
+    expect(topRatedhBtn).toBeInTheDocument();
 
-    //Modify search box
+    //Integration Test for "Search" functionality
 
     // Since jest-dom doesn't have browser events we have to mock them
-    const browserEventMock = {target : {value : "Burger"}};
+    const browserEventMock = { target: { value: "Burger" } };
 
     // Assertion to check the rescards are loaded (total 20 cards are loaded by default as per mock data)
-    const resCards = screen.getAllByTestId("res-card")
+    const resCards = screen.getAllByTestId("res-card");
     expect(resCards.length).toBe(20);
 
-    fireEvent.change(searchTextBox, browserEventMock)
+    fireEvent.change(searchTextBox, browserEventMock);
     fireEvent.click(searchBtn);
 
-    //Assertion to validate entries for search query for word "Burger"(Total 4 entries have word burger in them)
-    const newResCards = screen.getAllByTestId("res-card")
+    //Assertion to validate entries for search query for word "Burger"(As per mock data Total 4 entries have word 'burger' in them)
+    let newResCards = screen.getAllByTestId("res-card");
     expect(newResCards.length).toBe(4);
+
+    //Integration Test for "View Top Rated" button
+
+    // Emulate Button Click
+    fireEvent.click(topRatedhBtn);
+
+    // Assertion to validate top restaurants (As per mock data Total 7 entries are listed as 'top rated')
+    newResCards = screen.getAllByTestId("res-card");
+    expect(newResCards.length).toBe(7);
   });
 });
